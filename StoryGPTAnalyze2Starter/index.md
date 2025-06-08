@@ -4,7 +4,12 @@
 
 The `StoryGPTAnalyze2Starter ` app is a starter file for the *StoryGPT with Analysis (2 `Button`s)* tutorial.
 
-This starter file can be loaded directly into [`code.appinventor.mit.edu`](https://aif.to/sga2s-code) &mdash; a short link for [`https://code.appinventor.mit.edu/&#8203;?repo=https://&#8203;raw.githubusercontent.com/&#8203;dcpetty/&#8203;mit-app-inventor/&#8203;refs/&#8203;heads/&#8203;main/&#8203;StoryGPTAnalyze2Starter/&#8203;StoryGPTAnalyze2Starter.aia`](https://aif.to/sga2s-code).
+This starter file can be loaded directly into [`code.appinventor.mit.edu`](https://aif.to/sga2s-code) &mdash; a short link for <code>[https://code.appinventor.mit.edu/&#8203;?repo=https://&#8203;raw.githubusercontent.com/&#8203;dcpetty/&#8203;mit-app-inventor/&#8203;refs/&#8203;heads/&#8203;main/&#8203;StoryGPTAnalyze2Starter/&#8203;StoryGPTAnalyze2Starter.aia](https://aif.to/sga2s-code)</code>. Where:
+
+- `?repo=` will open a .AIA files in `code.appinventor.mit.edu` (if already logged in);
+- <code>https://&#8203;raw.githubusercontent.com/&#8203;dcpetty/&#8203;mit-app-inventor/&#8203;refs/&#8203;heads/</code> is the prefix for raw Github user content for this repository;
+- `main/` is the branch;
+- and <code>StoryGPTAnalyze2Starter/&#8203;StoryGPTAnalyze2Starter.aia</code> is the path to the .AIA file.
 
 ## Code
 
