@@ -10,7 +10,7 @@ The `ButtonShow` app demonstrates a low-code method for using `Button` events to
 
 ## Code
 
-[![ButtonShow blocks](./ButtonShow.png)](https://github.com/psb-david-petty/mit-app-inventor/blob/master/ButtonShow/ButtonShow.png)
+[![ButtonShow blocks](./ButtonShow.png)](https://github.com/dcpetty/mit-app-inventor/blob/master/ButtonShow/ButtonShow.png)
 
 - The `Screen1.Initialize` invokes the `all_invisible` procedure, which simply makes every image invisible.
 - The *Button1*, *Button2*, *Button3*, and *Button4* `Button`s first invoke the `all_invisible` procedure, then make visible *Image1*, *Image2*, *Image3*, or *Image4* respectively.
@@ -19,10 +19,10 @@ The `ButtonShow` app demonstrates a low-code method for using `Button` events to
 
 | Kitten | Credit |
 | --- | --- |
-| `Image1` | Photo by Patrick Slade (https://unsplash.com/@patrickslade) on Unsplash (https://unsplash.com/photos/orange-tabby-cat-lying-on-white-textile-tuomgxdoIP4) |
-| `Image2` | Photo by The Lucky Neko (https://unsplash.com/@theluckyneko) on Unsplash (https://unsplash.com/photos/black-kitten-AtehQqKgeLs) |
-| `Image2` | Photo by Sandra Lind (https://unsplash.com/@sandralindh) on Unsplash (https://unsplash.com/photos/silver-tabby-cat-on-white-textile-niCN2DhTdlI) |
-| `Image2` | Photo by Simona Hane (https://unsplash.com/@hanekami) on Unsplash (https://unsplash.com/photos/a-kitten-with-blue-eyes-sitting-on-a-bed-MZA2B9MjuCM) |
+| `Image1` | Photo by Patrick Slade ([https://unsplash.com/@patrickslade](https://unsplash.com/@patrickslade)) on Unsplash ([https://unsplash.com/photos/orange-tabby-cat-lying-on-white-textile-tuomgxdoIP4](https://unsplash.com/photos/orange-tabby-cat-lying-on-white-textile-tuomgxdoIP4)) |
+| `Image2` | Photo by The Lucky Neko ([https://unsplash.com/@theluckyneko](https://unsplash.com/@theluckyneko) on Unsplash ([https://unsplash.com/photos/black-kitten-AtehQqKgeLs](https://unsplash.com/photos/black-kitten-AtehQqKgeLs)) |
+| `Image2` | Photo by Sandra Lind ([https://unsplash.com/@sandralindh](https://unsplash.com/@sandralindh)) on Unsplash ([https://unsplash.com/photos/silver-tabby-cat-on-white-textile-niCN2DhTdlI](https://unsplash.com/photos/silver-tabby-cat-on-white-textile-niCN2DhTdlI)) |
+| `Image2` | Photo by Simona Hane ([https://unsplash.com/@hanekami](https://unsplash.com/@hanekami)) on Unsplash ([https://unsplash.com/photos/a-kitten-with-blue-eyes-sitting-on-a-bed-MZA2B9MjuCM](https://unsplash.com/photos/a-kitten-with-blue-eyes-sitting-on-a-bed-MZA2B9MjuCM)) |
 
 ## Designer
 
