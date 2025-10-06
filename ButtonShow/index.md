@@ -4,16 +4,16 @@
 
 The `ButtonShow` app demonstrates a low-code method for using `Button` events to make various *kitten* images visible. It demonstrates a few important computing concepts:
 
-- Simple `Button` events tied directly to their effect.
-- A property (`visible`) with a [Boolean](https://en.wikipedia.org/wiki/Boolean_data_type) value (either `true` or `false`).
+- Simple `Button.Click` events tied directly to their effect.
+- An `Image` property (`visible`) with a [Boolean](https://en.wikipedia.org/wiki/Boolean_data_type) value (either `true` or `false`).
 - Encapsulating shared behaviors in a procedure.
 
 ## Code
 
 [![ButtonShow blocks](./ButtonShow.png)](https://github.com/dcpetty/mit-app-inventor/blob/master/ButtonShow/ButtonShow.png)
 
-- The `Screen1.Initialize` invokes the `all_invisible` procedure, which simply makes every image invisible.
-- The *Button1*, *Button2*, *Button3*, and *Button4* `Button`s first invoke the `all_invisible` procedure, then make visible *Image1*, *Image2*, *Image3*, or *Image4* respectively.
+- The `Screen1.Initialize` event invokes the `all_invisible` procedure, which simply makes every image invisible.
+- The *Button1*, *Button2*, *Button3*, and *Button4* `Button.Click` events first invoke the `all_invisible` procedure, then make `visible` *Image1*, *Image2*, *Image3*, or *Image4* respectively.
 
 ## Credits
 
