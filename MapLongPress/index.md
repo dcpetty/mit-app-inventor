@@ -2,7 +2,9 @@
 
 ## About this app
 
-The `MapLongPress ` app demonstrates using `Map1.LongPressAtPoint` to add latitude and longitude values to `TinyDB1` each time the map is long-pressed. Further functionality can be added after the locations are collected.
+The `MapLongPress ` app demonstrates using `Map1.LongPressAtPoint` to add latitude and longitude values to `TinyDB1` each time the map is long-pressed. 
+
+Further functionality can be added after the locations are collected &mdash; for example, as shown in this [tutorial video](https://youtu.be/tSWKmOAH75o).
 
 ## Code
 
