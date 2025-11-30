@@ -24,4 +24,13 @@ This starter file can be loaded directly into [`code.appinventor.mit.edu`](https
 
 <hr>
 
-[&#128279; permalink](https://dcpetty.github.io/mit-app-inventor/StoryGPTAnalyze2Starter/), [&#128297; repository](https://github.com/dcpetty/mit-app-inventor/tree/master/StoryGPTAnalyze2Starter), and [![MIT AI2 logo](../mit-app-inventor-2-logo-200x200.png){:width="36px"} `.AIA`](https://dcpetty.github.io/mit-app-inventor/StoryGPTAnalyze2Starter/StoryGPTAnalyze2Starter.aia) for this page.
+<div style="display: flex; flex-direction: row; justify-content: space-around; margin: 0 10%;">
+<a href="https://dcpetty.github.io/mit-app-inventor/StoryGPTAnalyze2Starter/">&#128279; permalink</a> 
+<a href="https://github.com/dcpetty/mit-app-inventor/tree/main/StoryGPTAnalyze2Starter">&#128230; repository</a> 
+<a href="https://code.appinventor.mit.edu/?repo=https://raw.githubusercontent.com/dcpetty/mit-app-inventor/refs/heads/main/StoryGPTAnalyze2Starter/StoryGPTAnalyze2Starter.aia"><img src="../codi-32x32.png" alt="codi" style="vertical-align: middle;"><code> .AIA</code></a>
+<!-- 
+PERMALINK: https://dcpetty.github.io/mit-app-inventor/REPO/
+REPOSITORY: https://github.com/dcpetty/mit-app-inventor/tree/main/REPO
+MIT APP INVENTOR: https://code.appinventor.mit.edu/?repo=https://raw.githubusercontent.com/dcpetty/mit-app-inventor/refs/heads/main/REPO/REPO.aia
+-->
+</div>
