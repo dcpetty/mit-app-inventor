@@ -17,4 +17,12 @@ Sample MIT App Inventor projects
 
 <hr>
 
-[&#128279; permalink](https://dcpetty.github.io/mit-app-inventor/) and [&#128297; repository](https://github.com/dcpetty/mit-app-inventor/) for this page.
+<div style="display: flex; flex-direction: row; justify-content: space-around; margin: 0 10%;">
+<a href="https://dcpetty.github.io/mit-app-inventor/">&#128279; permalink</a> 
+<a href="https://github.com/dcpetty/mit-app-inventor">&#128230; repository</a> 
+<!-- 
+PERMALINK: https://dcpetty.github.io/mit-app-inventor/REPO/
+REPOSITORY: https://github.com/dcpetty/mit-app-inventor/tree/main/REPO
+MIT APP INVENTOR: https://code.appinventor.mit.edu/?repo=https://raw.githubusercontent.com/dcpetty/mit-app-inventor/refs/heads/main/REPO/REPO.aia
+-->
+</div>
