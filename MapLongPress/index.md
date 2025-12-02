@@ -16,7 +16,7 @@ Further functionality can be added after the locations are collected &mdash; for
 
 ## Designer
 
-All components retain their default properties, &mdash; except `Width` and `Height` set to `Fill parent...` where necessary to center UX components and `Button` text(s) changed from their defaults(s). The initial `Map1` center is [41.9604726&deg;, -71.1990968&deg;](https://www.google.com/maps/place/Norton+High+School/@41.9604726,-71.1990968,16z/data=!3m1!4b1!4m6!3m5!1s0x89e461d41f59b92d:0x4fb09543bbdc0ada!8m2!3d41.9604726!4d-71.1965219!16s%2Fm%2F076ky4b).
+All components retain their default properties, &mdash; except `Width` and `Height` set to `Fill parent...` where necessary to center UX components and `Button` text(s) changed from their defaults(s). The initial `Map1` center is [41.96&deg;, -71.20&deg;](https://www.google.com/maps/place/Norton+High+School/@41.9604726,-71.1990968,16z/data=!3m1!4b1!4m6!3m5!1s0x89e461d41f59b92d:0x4fb09543bbdc0ada!8m2!3d41.9604726!4d-71.1965219!16s%2Fm%2F076ky4b).
 
 <hr>
 
