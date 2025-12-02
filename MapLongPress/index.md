@@ -30,4 +30,3 @@ REPOSITORY: https://github.com/dcpetty/mit-app-inventor/tree/main/REPO
 MIT APP INVENTOR: https://code.appinventor.mit.edu/?repo=https://raw.githubusercontent.com/dcpetty/mit-app-inventor/refs/heads/main/REPO/REPO.aia
 -->
 </div>
-Fixed permalink <div> and to open .AIA in code.appinventor.mit.edu.
