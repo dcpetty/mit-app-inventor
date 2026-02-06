@@ -4,6 +4,7 @@ Sample MIT App Inventor projects
 
 | Link | Description |
 |---|---|
+| [./2026-tx-csta](./2026-tx-csta) | This directory holds starter files and documentation for the [2026 Texas CSTA Regional Conference](https://docs.google.com/document/d/1s8OYp63AiIemV9x0erBY7EYnq_CWUQXRzCJBEfejxKU/) presentation. |
 | [./APCSPStroopExample](./APCSPStroopExample) | The `APCSPStroopExample`app illustrates all aspects of the [APCS-P](https://apcentral.collegeboard.org/pdf/ap-computer-science-principles-course-and-exam-description.pdf) requirements for the [Create Performance Task](https://apcentral.collegeboard.org/pdf/ap-csp-student-task-directions.pdf):<br>• List storing and access used to manage the complexity of the program;<br>• A procedure w/ a parameter that is called from different places with different values and whose behavior varies based on the value of the parameter; and<br>• An algorithm that includes sequencing, selection, and repetition. |
 | [./BlankTemplate](./BlankTemplate) | The `BlankTemplate` app is a template for *any* [MIT App Inventor](http://ai2.appinventor.mit.edu/) app. |
 | [./ButtonShow](./ButtonShow) | The `ButtonShow` app is a simple low-code app demonstrating the use of `Button` events. |
