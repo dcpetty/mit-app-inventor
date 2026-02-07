@@ -13,6 +13,26 @@ These apps are starter [MIT App Inventor](http://ai2.appinventor.mit.edu/) apps 
 | GoodReader | <a href="https://code.appinventor.mit.edu/?repo=https://raw.githubusercontent.com/dcpetty/mit-app-inventor/refs/heads/main/2026-tx-csta/GoodReaderStarter.aia"><img src="../codi-32x32.png" alt="codi" style="vertical-align: middle;"><code>GoodReaderStarter.aia</code></a> | Use a generative artificial intelligence [ChatBot](https://gemini.google.com/app) to encourage critical reading skills. |
 | Journal | <a href="https://code.appinventor.mit.edu/?repo=https://raw.githubusercontent.com/dcpetty/mit-app-inventor/refs/heads/main/2026-tx-csta/JournalStarter.aia"><img src="../codi-32x32.png" alt="codi" style="vertical-align: middle;"><code>JournalStarter.aia</code></a> | A basic journal app crowd-sourced data in a shared [Google Sheet](https://docs.google.com/spreadsheets/d/16-hA2pixAtVlUXWVXWUHK21pBuEiZXZhDDnSW-uHg7E/). |
 
+## Code
+
+The [MIT App Inventor](http://ai2.appinventor.mit.edu/) block code for the completed apps is below.
+
+### Doodle
+
+<img src="./Doodle-blocks.png" alt="Doodle blocks">
+
+### Map
+
+<img src="./Map-blocks.png" alt="Doodle blocks">
+
+### GoodReader
+
+<img src="./GoodReader-blocks.png" alt="Doodle blocks">
+
+### Journal
+
+<img src="./Journal-blocks.png" alt="Doodle blocks">
+
 <hr>
 
 <div style="display: flex; flex-direction: row; justify-content: space-around; margin: 0 10%;">
