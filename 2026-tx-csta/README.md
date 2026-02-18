@@ -133,7 +133,7 @@ span { background-color: #bcdb74; border-radius: 8px; padding: 2px 6px; }
 
 <ul>
 <li><em>Label3</em> is set to <code>Text: Type: </code>.</li>
-<li><em>SpinnerQuestionType</em> is set to <code>Width: Fill Parent...</code> and <code>ElementsFromString: Reading and comprehension questions,Writing prompts,Analysis questions</code></code>.
+<li><em>SpinnerQuestionType</em> is set to <code>Width: Fill Parent...</code> and <code>ElementsFromString: Reading and comprehension questions,Writing prompts,Analysis questions</code>.</li>
 
 </ul>
 
@@ -153,8 +153,8 @@ span { background-color: #bcdb74; border-radius: 8px; padding: 2px 6px; }
 </ul>
 
 <br><img src="./MapStarter-ideb-Screen1.Initialize.png" alt="MapStarter Screen1.Initialize blocks"></li>
-<li>An Unconnected <em>Chatbot1.Converse</em> call illustrates the GoodReader prompt strategy using <em>SpinnerQuestionType.Selection</em>, <em>SLiderAge.ThumPosition</em>, and <em>TextBoxBook.Text</em>.
-<br><img src="./MapStarter-ideb-ChatBot1.Converse.png" alt="MapStarter ChatBot1.Converse blocks"></li> 
+<li>An Unconnected <em>Chatbot1.Converse</em> call illustrates the GoodReader prompt strategy using <em>SpinnerQuestionType.Selection</em>, <em>SliderAge.ThumbPosition</em>, and <em>TextBoxBook.Text</em>.
+<br><img src="./MapStarter-ideb-ChatBot1.Converse.png" alt="MapStarter ChatBot1.Converse blocks"></li>
 </ul>
 
 </td>
