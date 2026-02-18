@@ -17,27 +17,37 @@ These apps are starter [MIT App Inventor](http://ai2.appinventor.mit.edu/) apps 
 
 The [MIT App Inventor](http://ai2.appinventor.mit.edu/) block code for the completed apps is below.
 
-<table><tr>
-<td>
-
-## From the starter project
-
-- Foo
-- Bar
-- Blap 
-
-</td>
-<td>
-
-## From the completed project
-
-- Foo
-- Bar
-- Blap 
-
-</td></tr></table>
+<style>
+table { width: 100%; }
+li { list-style-type: square; font-size: small; }
+</style>
 
 ### Doodle
+
+#### What we learned
+
+<table><tr>
+
+<td>
+<h5>From the starter project in the designer</h5>
+<ul>
+<li><em>Screen1</em> is set to <code>Title: Doodle</code> &mdash; as are all projects.
+<li><em>Canvas1</em> is set to <code>Width: Fill Parent...</code> and <code>Height: Fill Parent...</code> to fill out the <em>Canvas1</em> extent.
+<li><em>HorizontalArrangement1</em> is set to <code>Visible: &#x2610;</code> rendering it invisible.
+<li><em>HorizontalArrangement1</em> is set to <code>Width: Fill Parent...</code> for when it is made visible.
+
+</ul> 
+</td>
+
+<td>
+<h5>From the completed project</h5>
+<ul>
+<li>
+</ul> 
+</td>
+</tr></table>
+
+#### Code
 
 <img src="./Doodle-blocks.png" alt="Doodle blocks">
 
