@@ -148,7 +148,7 @@ span { background-color: #bcdb74; border-radius: 8px; padding: 2px 6px; }
 
 <ul>
 <li>Use of <em>for each item in list</em> from the <em>Control</em> drawer to iterate over each item of a list.</li>
-<li>Using <em>Screen1.Initialize</em> to initialize user-interface component properties &mdash; rather than setting them in the designer. In this case using <em>Any Label</em> from the <em>Any component</em> drawer to set the <em>WidthPercent</em> of <em>Label1</em>, <em>Label2</em>, and <em>Label3</em> and to set the <em>FontSize</em> of <em>every Label</em> (available in <em>Any Label</em>).</li>
+<li>Using <em>Screen1.Initialize</em> to initialize user-interface component properties &mdash; rather than setting them in the designer. In this case using <em>Any Label</em> from the <em>Any component</em> drawer to set the <em>WidthPercent</em> of <em>Label1</em>, <em>Label2</em>, and <em>Label3</em> and to set the <em>FontSize</em> of <em>every Label</em> (available in <em>Any Label</em> from the <em>Any component</em> drawer).</li>
 <li>Set <em>LabelAge.Text</em> to the initial <em>SliderAge.ThumbPosition</em>.</li>
 </ul>
 
@@ -163,15 +163,29 @@ span { background-color: #bcdb74; border-radius: 8px; padding: 2px 6px; }
 
 <h5>From the completed project in the <span>Designer</span></h5>
 <ul>
-<li><em>Screen1</em> is set to <code>Title: GoodReader</code> &mdash; as are all project titles.</li>
-<li><em>HorizontalArrangement1</em> is set to <code>Width: Fill Parent...</code> and has two components within it.
+<li><em>HorizontalArrangement4</em> is added and set to <code>Width: Fill Parent...</code> and has two components within it:
 
 <ul>
-<li><em>Label1</em> is set to <code>Text: Book / Part: </code>.</li>
-<li><em>TextBoxBook</em> is set to <code>Width: Fill Parent...</code>.</li>
+<li><em>ButtonSubmit</em> is added and set to <code>Width: Fill Parent...</code> and <code>Text: Submit</code>.</li>
+<li><em>ButtonNew</em> is added and set to <code>Width: Fill Parent...</code> and <code>Text: New Reading</code>.</li>
 </ul>
 
 </li>
+</ul>
+
+<h5>From the completed project in the <span>Blocks</span></h5>
+<ul>
+<li>Add to the <em>Screen1.Initialize</em> event a <em>for each item in list</em> block from the <em>Control</em> drawer to iterate over each item of the <em>every Button</em> list (available in <em>Any Button</em> from the <em>Any component</em> drawer) to set the <em>FontSize</em> and <em>FontBold</em> of every button.</li>
+<li>Add a <em>SliderAge.PositionChanged</em> event that sets <em>LabelAge.Text</em> to <em>SliderAge.ThumbPosition</em>.</li>
+<li>Add code to interact with <em>ChatBot1</em>.
+
+<ul>
+<li>Add <em>ButtonSubmit.Click</em> event to call <em>Chatbot1.Converse</em> with the prompt, to set <em>LabelResponse.Text</em> to <code>""</code> (to clear any previous response and indicate that the chatbot is 'thinking'), to set <em>ButtonSubmit.Enabled</em> to <code>false</code> (to disable the button and prevent multiple queries), and to set <em>ButtonSubmit.TextColor</em> to <code>gray</code> (to 'gray it out').</li>
+<li>Add <em>ChatBot1.GotResponse</em> event to set <em>LabelResponse.Text</em> to the <code>responseText</code> parameter (to display the response), set <em>ButtonSubmit.Enabled</em> to <code>true</code> (to enable the button for the next query), and set <em>ButtonSubmit.TextColor</em> to <code>black</code>. <strong>It is vital that <em>ButtonSubmit.Enabled</em> is set to <code>true</code> in both chatbot events or the app could cease working.</strong></li>
+<li>Add <em>ChatBot1.ErrorOccured</em> event to set <em>LabelResponse.Text</em> to the <code>responseText</code> parameter (to display the error), set <em>ButtonSubmit.Enabled</em> to <code>true</code> (to enable the button for the next query), and set <em>ButtonSubmit.TextColor</em> to <code>black</code>. <strong>It is vital that <em>ButtonSubmit.Enabled</em> is set to <code>true</code> in both chatbot events or the app could cease working.</strong></li>
+<li>Add <em>ButtonNew.Click</em> event to call <em>Chatbot1.ResetConversation</em> and to set <em>LabelResponse.Text</em> to <code>""</code> (to clear any previous response).</li>
+</ul>
+
 </ul>
 
 </td>
