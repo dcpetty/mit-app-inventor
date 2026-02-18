@@ -47,7 +47,7 @@ span { background-color: #bcdb74; border-radius: 8px; padding: 2px 6px; }
 <ul>
 <li><em>HorizontalArrangement1</em> is set to <code>Visible: &#x2612;</code> rendering it visible.</li>
 <li><em>ButtonClear</em> is added to <em>HorizontalArrangement1</em>, renamed, and set to <code>Text: Clear</code>.</li>
-<li><em>SliderWidth</em> is added to <em>HorizontalArrangement1</em>, renamed, and set to <code>Width: Fill Parent...</code>, <code>MaxValue: 20</code>, <code>MinValue: 2</code>, <code>NumberOfSteps: 18</code>, <code>ThumbPosition: 2</code>.</li>
+<li><em>SliderWidth</em> is added to <em>HorizontalArrangement1</em>, renamed, and set to <code>Width: Fill Parent...</code>, <code>MaxValue: 20</code>, <code>MinValue: 2</code>, <code>NumberOfSteps: 18</code>, and <code>ThumbPosition: 2</code>.</li>
 </ul> 
 
 <h5>From the completed project in the <span>Blocks</span></h5>
@@ -87,8 +87,8 @@ span { background-color: #bcdb74; border-radius: 8px; padding: 2px 6px; }
 <h5>From the completed project in the <span>Blocks</span></h5>
 <ul>
 <li>The <em>Map1.LongPressAtPoint</em> event initializes the local variable <em>pin</em> with the result of the call to <em>Map1.CreateMarker</em> using the <code>latitude</code> and <code>longitude</code> parameters.</li>
-<li>With <em>Any Marker</em> from the <em>Any component</em> drawer, use <em>setMarker.EnableInfoBox</em> with the value of the <em>pin</em> local variable as the <code>of component</code> parameter and <code>true</code> as the <code>to</code> parameter &mdash; thereby enabling the <a href="https://ai2.appinventor.mit.edu/reference/components/maps.html#Map">infobox window display</a> when the user taps the <em>Marker</em>.</li>
-<li>With <em>Any Marker</em> from the <em>Any component</em> drawer, use <em>setMarker.Title</em> with the value of the <em>pin</em> local variable as the <code>of component</code> parameter and a <em>Text</em> <em>join</em> of two values as the <code>to</code> parameter: <ul><li>the rounded result of a call to <em>Marker.DistanceToPoint</em> from <em>Any Marker</em> in the <em>Any component</em> drawer with the value of the <em>pin</em> local variable as the <code>of component</code> parameter, the value of the <em>MarkerMcMillen.Latitude</em> property as the <code>latitude</code> parameter, and the value of the <em>MarkerMcMillen.Longitude</em> property as the <code>longitude</code> parameter and;</li><li>the text <code> meters to McMillen</code>.</li></ul></li>
+<li>With <em>Any Marker</em> from the <em>Any component</em> drawer within the local variable block, use <em>setMarker.EnableInfoBox</em> with the value of the <em>pin</em> local variable as the <code>of component</code> parameter and <code>true</code> as the <code>to</code> parameter &mdash; thereby enabling the <a href="https://ai2.appinventor.mit.edu/reference/components/maps.html#Map">infobox window display</a> when the user taps the <em>Marker</em>.</li>
+<li>With <em>Any Marker</em> from the <em>Any component</em> drawer within the local variable block, use <em>setMarker.Title</em> with the value of the <em>pin</em> local variable as the <code>of component</code> parameter and a <em>Text</em> <em>join</em> of two values as the <code>to</code> parameter: <ul><li>the rounded result of a call to <em>Marker.DistanceToPoint</em> from <em>Any Marker</em> in the <em>Any component</em> drawer with the value of the <em>pin</em> local variable as the <code>of component</code> parameter, the value of the <em>MarkerMcMillen.Latitude</em> property as the <code>latitude</code> parameter, and the value of the <em>MarkerMcMillen.Longitude</em> property as the <code>longitude</code> parameter and;</li><li>the text <code>" meters to McMillen"</code>.</li></ul></li>
 </ul> 
 
 </td>
@@ -100,6 +100,81 @@ span { background-color: #bcdb74; border-radius: 8px; padding: 2px 6px; }
 <img src="./Map-blocks.png" alt="Doodle blocks">
 
 ### GoodReader
+
+#### What we learned
+
+<table><tr>
+
+<td>
+
+<h5>From the starter project in the <span>Designer</span></h5>
+<ul>
+<li><em>Screen1</em> is set to <code>Title: GoodReader</code> &mdash; as are all project titles.</li>
+<li><em>HorizontalArrangement1</em> is set to <code>Width: Fill Parent...</code> and has two components within it.
+
+<ul>
+<li><em>Label1</em> is set to <code>Text: Book / Part: </code>.</li>
+<li><em>TextBoxBook</em> is set to <code>Width: Fill Parent...</code>.</li>
+</ul>
+
+</li>
+<li><em>HorizontalArrangement2</em> is set to <code>Width: Fill Parent...</code> and has three components within it.
+
+<ul>
+<li><em>Label2</em> is set to <code>Text: Age: </code>.</li>
+<li><em>SliderAge</em> is set to <code>Width: Fill Parent...</code>, <code>MaxValue: 18</code>, <code>MinValue: 6</code>, <code>NumberOfSteps: 12</code>, and <code>ThumbPosition: 10</code>.</li>
+<li><em>Label2</em> is set to <code>Text: Age</code>.</li>
+</ul>
+
+</li>
+<li><em>HorizontalArrangement3</em> is set to <code>Width: Fill Parent...</code> and has two components within it.
+
+<ul>
+<li><em>Label3</em> is set to <code>Text: Type: </code>.</li>
+<li><em>SpinnerQuestionType</em> is set to <code>Width: Fill Parent...</code> and <code>ElementsFromString: Reading and comprehension questions,Writing prompts,Analysis questions</code></code>.
+
+</ul>
+
+</li>
+<li><em>LabelResponse</em> is set to <code>Width: Fill Parent...</code>, <code>Text:</code>.</li>
+<li><em>ChatBot1</em> is set with an <code>ApiKey</code> and <code>Provider: gemini</code>.</li>
+</ul> 
+
+<h5>From the starter project in the <span>Blocks</span></h5>
+<ul>
+<li>The blocks in the <em>Screen1.Initialize</em> event illustrate several coding idioms in <a href="">MIT App Inventor</a>:
+
+<ul>
+<li>Use of <em>for each item in list</em> from the <em>Control</em> drawer to iterate over each item of a list.</li>
+<li>Using <em>Screen1.Initialize</em> to initialize user-interface component properties &mdash; rather than setting them in the designer. In this case using <em>Any Label</em> from the <em>Any component</em> drawer to set the <em>WidthPercent</em> of <em>Label1</em>, <em>Label2</em>, and <em>Label3</em> and to set the <em>FontSize</em> of <em>every Label</em> (available in <em>Any Label</em>).</li>
+<li>Set <em>LabelAge.Text</em> to the initial <em>SliderAge.ThumbPosition</em>.</li>
+</ul>
+
+<br><img src="./MapStarter-ideb-Screen1.Initialize.png" alt="MapStarter Screen1.Initialize blocks"></li>
+<li>An Unconnected <em>Chatbot1.Converse</em> call illustrates the GoodReader prompt strategy using <em>SpinnerQuestionType.Selection</em>, <em>SLiderAge.ThumPosition</em>, and <em>TextBoxBook.Text</em>.
+<br><img src="./MapStarter-ideb-ChatBot1.Converse.png" alt="MapStarter ChatBot1.Converse blocks"></li> 
+</ul>
+
+</td>
+
+<td>
+
+<h5>From the completed project in the <span>Designer</span></h5>
+<ul>
+<li><em>Screen1</em> is set to <code>Title: GoodReader</code> &mdash; as are all project titles.</li>
+<li><em>HorizontalArrangement1</em> is set to <code>Width: Fill Parent...</code> and has two components within it.
+
+<ul>
+<li><em>Label1</em> is set to <code>Text: Book / Part: </code>.</li>
+<li><em>TextBoxBook</em> is set to <code>Width: Fill Parent...</code>.</li>
+</ul>
+
+</li>
+
+</td>
+</tr></table>
+
+#### Code
 
 <img src="./GoodReader-blocks.png" alt="Doodle blocks">
 
