@@ -186,6 +186,7 @@ span { background-color: #bcdb74; border-radius: 8px; padding: 2px 6px; }
 <li>Add <em>ButtonNew.Click</em> event to call <em>Chatbot1.ResetConversation</em> and to set <em>LabelResponse.Text</em> to <code>""</code> (to clear any previous response).</li>
 </ul>
 
+</li>
 </ul>
 
 </td>
