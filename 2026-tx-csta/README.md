@@ -172,6 +172,7 @@ span { background-color: #bcdb74; border-radius: 8px; padding: 2px 6px; }
 </ul>
 
 </li>
+</ul>
 
 </td>
 
