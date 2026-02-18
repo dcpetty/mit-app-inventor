@@ -33,8 +33,8 @@ span { background-color: #bcdb74; border-radius: 8px; padding: 2px 6px; }
 
 <h5>From the starter project in the <span>Designer</span></h5>
 <ul>
-<li><em>Screen1</em> is set to <code>Title: Doodle</code> &mdash; as are all projects.</li>
-<li><em>Canvas1</em> is set to <code>Width: Fill Parent...</code> and <code>Height: Fill Parent...</code> to fill out the <em>Canvas1</em> extent.</li>
+<li><em>Screen1</em> is set to <code>Title: Doodle</code> &mdash; as are all project titles.</li>
+<li><em>Canvas1</em> is set to <code>Width: Fill Parent...</code> and <code>Height: Fill Parent...</code> to fill out the <em>Screen1</em> extent.</li>
 <li><em>HorizontalArrangement1</em> is set to <code>Visible: &#x2610;</code> rendering it invisible.</li>
 <li><em>HorizontalArrangement1</em> is set to <code>Width: Fill Parent...</code> for when it is made visible.</li>
 </ul> 
@@ -54,7 +54,7 @@ span { background-color: #bcdb74; border-radius: 8px; padding: 2px 6px; }
 <ul>
 <li>The <em>Canvas1.Dragged</em> event calls <em>Canvas1.DrawLine</em> with the proper <a href="https://ai2.appinventor.mit.edu/reference/components/animation.html#Canvas">parameters</a>.</li>
 <li>The <em>ButtonClear.Clicked</em> event calls <em>Canvas1.Clear</em>.</li>
-<li>The <em>SliderWidth.PositionChanged</em> sets <em>Canvas1.LineWidth</em> to the <em>thumbPosition</em> parameter value.</li>
+<li>The <em>SliderWidth.PositionChanged</em> sets <em>Canvas1.LineWidth</em> to the <code>thumbPosition</code> parameter value.</li>
 </ul> 
 
 </td>
@@ -66,6 +66,36 @@ span { background-color: #bcdb74; border-radius: 8px; padding: 2px 6px; }
 <img src="./Doodle-blocks.png" alt="Doodle blocks">
 
 ### Map
+
+#### What we learned
+
+<table><tr>
+
+<td>
+
+<h5>From the starter project in the <span>Designer</span></h5>
+<ul>
+<li><em>Screen1</em> is set to <code>Title: Map</code> &mdash; as are all project titles.</li>
+<li><em>Map1</em> is set to <code>Width: Fill Parent...</code> and <code>Height: Fill Parent...</code> to fill out the <em>Screen1</em> extent.</li>
+<li><em>MarkerMcMillen</em> is set to <code>FillColor: Blue</code> (because the default is <code>Red</code>), <code>Latitude: 33.028</code> (the latitude of <a href="https://mcmillen.pisd.edu/">McMillen High School</a>, <code>Longitude:  -96.611</code> (the longitude of <a href="https://mcmillen.pisd.edu/">McMillen High School</a>), and <code>Draggable: &#x2610;</code> (so the marker will remain fixed).</li>
+</ul> 
+
+</td>
+
+<td>
+
+<h5>From the completed project in the <span>Blocks</span></h5>
+<ul>
+<li>The <em>Map1.LongPressAtPoint</em> event initializes the local variable <em>pin</em> with the result of the call to <em>Map1.CreateMarker</em> using the <code>latitude</code> and <code>longitude</code> parameters.</li>
+<li>With <em>Any Marker</em> from the <em>Any component</em> drawer, use <em>setMarker.EnableInfoBox</em> with the value of the <em>pin</em> local variable as the <code>of component</code> parameter and <code>true</code> as the <code>to</code> parameter &mdash; thereby enabling the <a href="https://ai2.appinventor.mit.edu/reference/components/maps.html#Map">infobox window display</a> when the user taps the <em>Marker</em>.</li>
+<li>With <em>Any Marker</em> from the <em>Any component</em> drawer, use <em>setMarker.Title</em> with the value of the <em>pin</em> local variable as the <code>of component</code> parameter and a <em>Text</em> <em>join</em> of two values as the <code>to</code> parameter: <ul><li>the rounded result of a call to <em>Marker.DistanceToPoint</em> from <em>Any Marker</em> in the <em>Any component</em> drawer with the value of the <em>pin</em> local variable as the <code>of component</code> parameter, the value of the <em>MarkerMcMillen.Latitude</em> property as the <code>latitude</code> parameter, and the value of the <em>MarkerMcMillen.Longitude</em> property as the <code>longitude</code> parameter and;</li><li>the text <code> meters to McMillen</code>.</li></ul></li>
+</ul> 
+
+</td>
+
+</tr></table>
+
+#### Code
 
 <img src="./Map-blocks.png" alt="Doodle blocks">
 
