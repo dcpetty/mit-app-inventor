@@ -19,6 +19,8 @@ The [MIT App Inventor](http://ai2.appinventor.mit.edu/) block code for the compl
 
 <style>
 table { width: 100%; }
+.wwl tr > td:first-child { width: 50%; }
+.wwl img { width: 100%; }
 li { list-style-type: square; font-size: small; }
 span { background-color: #bcdb74; border-radius: 8px; padding: 2px 6px; }
 </style>
@@ -27,7 +29,7 @@ span { background-color: #bcdb74; border-radius: 8px; padding: 2px 6px; }
 
 #### What we learned
 
-<table><tr>
+<table class="wwl"><tr>
 
 <td>
 
@@ -69,7 +71,7 @@ span { background-color: #bcdb74; border-radius: 8px; padding: 2px 6px; }
 
 #### What we learned
 
-<table><tr>
+<table class="wwl"><tr>
 
 <td>
 
@@ -103,7 +105,7 @@ span { background-color: #bcdb74; border-radius: 8px; padding: 2px 6px; }
 
 #### What we learned
 
-<table><tr>
+<table class="wwl"><tr>
 
 <td>
 
