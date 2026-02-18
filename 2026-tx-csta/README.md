@@ -20,6 +20,7 @@ The [MIT App Inventor](http://ai2.appinventor.mit.edu/) block code for the compl
 <style>
 table { width: 100%; }
 li { list-style-type: square; font-size: small; }
+span { background-color: #bcdb74; border-radius: 8px; padding: 2px 6px; }
 </style>
 
 ### Doodle
@@ -29,22 +30,35 @@ li { list-style-type: square; font-size: small; }
 <table><tr>
 
 <td>
-<h5>From the starter project in the designer</h5>
+
+<h5>From the starter project in the <span>Designer</span></h5>
 <ul>
 <li><em>Screen1</em> is set to <code>Title: Doodle</code> &mdash; as are all projects.
 <li><em>Canvas1</em> is set to <code>Width: Fill Parent...</code> and <code>Height: Fill Parent...</code> to fill out the <em>Canvas1</em> extent.
 <li><em>HorizontalArrangement1</em> is set to <code>Visible: &#x2610;</code> rendering it invisible.
 <li><em>HorizontalArrangement1</em> is set to <code>Width: Fill Parent...</code> for when it is made visible.
-
 </ul> 
+
 </td>
 
 <td>
-<h5>From the completed project</h5>
+
+<h5>From the completed project in the <span>Designer</span></h5>
 <ul>
-<li>
+<li><em>HorizontalArrangement1</em> is set to <code>Visible: &#x2612;</code> rendering it visible.
+<li><em>ButtonClear</em> is added to <em>HorizontalArrangement1</em>, renamed, and set to <code>Text: Clear</code>.
+<li><em>SliderWidth</em> is added to <em>HorizontalArrangement1</em>, renamed, and set to <code>Width: Fill Parent...</code>, <code>MaxValue: 20</code>, <code>MinValue: 2</code>, <code>NumberOfSteps: 18</code>, <code>ThumbPosition: 2</code>.
 </ul> 
+
+<h5>From the completed project in the <span>Blocks</span></h5>
+<ul>
+<li>The <em>Canvas1.Dragged</em> event calls <em>Canvas1.DrawLine</em> with the proper <a href="https://ai2.appinventor.mit.edu/reference/components/animation.html#Canvas">parameters</a>.
+<li>The <em>ButtonClear.Clicked</em> event calls <em>Canvas1.Clear</em>.
+<li>The <em>SliderWidth.PositionChanged</em> sets <em>Canvas1.LineWidth</em> to the <em>thumbPosition</em> parameter value.
+</ul> 
+
 </td>
+
 </tr></table>
 
 #### Code
