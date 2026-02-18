@@ -47,9 +47,9 @@ span { background-color: #bcdb74; border-radius: 8px; padding: 2px 6px; }
 
 <h5>From the completed project in the <span>Designer</span></h5>
 <ul>
-<li><em>HorizontalArrangement1</em> is set to <code>Visible: &#x2612;</code> rendering it visible.</li>
-<li><em>ButtonClear</em> is added to <em>HorizontalArrangement1</em>, renamed, and set to <code>Text: Clear</code>.</li>
-<li><em>SliderWidth</em> is added to <em>HorizontalArrangement1</em>, renamed, and set to <code>Width: Fill Parent...</code>, <code>MaxValue: 20</code>, <code>MinValue: 2</code>, <code>NumberOfSteps: 18</code>, and <code>ThumbPosition: 2</code>.</li>
+<li>Set <em>HorizontalArrangement1</em> to <code>Visible: &#x2612;</code> rendering it visible.</li>
+<li>Added <em>ButtonClear</em> to <em>HorizontalArrangement1</em> (and named it) set to <code>Text: Clear</code>.</li>
+<li>Added <em>SliderWidth</em> to <em>HorizontalArrangement1</em> (and renamed it) set to <code>Width: Fill Parent...</code>, <code>MaxValue: 20</code>, <code>MinValue: 2</code>, <code>NumberOfSteps: 18</code>, and <code>ThumbPosition: 2</code>.</li>
 </ul> 
 
 <h5>From the completed project in the <span>Blocks</span></h5>
@@ -144,7 +144,7 @@ span { background-color: #bcdb74; border-radius: 8px; padding: 2px 6px; }
 
 <h5>From the starter project in the <span>Blocks</span></h5>
 <ul>
-<li>The blocks in the <em>Screen1.Initialize</em> event illustrate several coding idioms in <a href="">MIT App Inventor</a>:
+<li>The blocks in the <em>Screen1.Initialize</em> event illustrate several coding idioms in <a href="https://appinventor.mit.edu/">MIT App Inventor</a>:
 
 <ul>
 <li>Use of <em>for each item in list</em> from the <em>Control</em> drawer to iterate over each item of a list.</li>
@@ -163,11 +163,11 @@ span { background-color: #bcdb74; border-radius: 8px; padding: 2px 6px; }
 
 <h5>From the completed project in the <span>Designer</span></h5>
 <ul>
-<li><em>HorizontalArrangement4</em> is added and set to <code>Width: Fill Parent...</code> and has two components within it:
+<li>Added <em>HorizontalArrangement4</em> set to <code>Width: Fill Parent...</code> and has two components within it:
 
 <ul>
-<li><em>ButtonSubmit</em> is added and set to <code>Width: Fill Parent...</code> and <code>Text: Submit</code>.</li>
-<li><em>ButtonNew</em> is added and set to <code>Width: Fill Parent...</code> and <code>Text: New Reading</code>.</li>
+<li>Added <em>ButtonSubmit</em> and set to <code>Width: Fill Parent...</code> and <code>Text: Submit</code>.</li>
+<li>Added <em>ButtonNew</em> and set to <code>Width: Fill Parent...</code> and <code>Text: New Reading</code>.</li>
 </ul>
 
 </li>
