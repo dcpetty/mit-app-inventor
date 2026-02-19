@@ -225,7 +225,7 @@ span { background-color: #bcdb74; border-radius: 8px; padding: 2px 6px; }
 <h5>From the starter project in the <span>Blocks</span></h5>
 <ul>
 <li>Initialize the global variable <em>sheet</em> (from the <em>Variables</em> from the <em>Built-in</em> drawer) to <code>"CHANGE"</code>. This is the shared worksheet within the shared Google Sheet and should be changed to suit the user.</li>
-<li>The <em>Screen1.Initialize</em> event calls <em>Sheet1.AddSheet</em> with the value of the global variable <em>sheet</em> as the <code>sheetName</code> parameter.
+<li>The <em>Screen1.Initialize</em> event calls <em>Sheet1.AddSheet</em> with the value of the global variable <em>sheet</em> as the <code>sheetName</code> parameter.</li>
 <li>The <em>makeRow</em> procedure returns a three-item list corresponding to three columns in the shared worksheet:
 
 <ul>
@@ -235,9 +235,11 @@ span { background-color: #bcdb74; border-radius: 8px; padding: 2px 6px; }
 </ul>
 
 This is the row that will be added to the shared worksheet with <em>Spreadsheet1.AddRow</em></li>
-</ul>
 <img src="./images/JournalStarter-blocks.png" alt="JournalStarter blocks">
+</ul>
+
 </td>
+
 <td>
 
 <h5>From the completed project in the <span>Designer</span></h5>
