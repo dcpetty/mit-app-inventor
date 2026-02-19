@@ -81,10 +81,14 @@ The <a href="https://ai2.appinventor.mit.edu/reference/components/animation.html
 <td>
 
 <h5>From the starter project in the <span>Designer</span></h5>
+There are typical ways to set up user-interface components in a project.
 <ul>
 <li><em>Screen1</em> is set to <code>Title: Map</code> &mdash; as are all project titles.</li>
 <li><em>Map1</em> is set to <code>Width: Fill Parent...</code> and <code>Height: Fill Parent...</code> to fill out the <em>Screen1</em> extent.</li>
-<li><em>MarkerMcMillen</em> is set to <code>FillColor: Blue</code> (because the default is <code>Red</code>), <code>Latitude: 33.028</code> (the latitude of <a href="https://mcmillen.pisd.edu/">McMillen High School</a>, <code>Longitude:  -96.611</code> (the longitude of <a href="https://mcmillen.pisd.edu/">McMillen High School</a>), and <code>Draggable: &#x2610;</code> (so the marker will remain fixed).</li>
+</ul>
+<a href="https://ai2.appinventor.mit.edu/reference/components/maps.html#Marker">Marker</a>s (pins) can be added to <a href="https://ai2.appinventor.mit.edu/reference/components/maps.html#Map">Map</a>s in Designer. 
+<ul>
+<li><em>MarkerMcMillen</em> is set to <code>FillColor: Blue</code> (because the default is <code>Red</code>), <code>Latitude: 33.028</code> (the latitude of <a href="https://mcmillen.pisd.edu/">McMillen High School</a>, <code>Longitude:  -96.611</code> (the longitude of <a href="https://mcmillen.pisd.edu/">McMillen High School</a>), and <code>Draggable: &#x2610;</code> (so it will remain fixed).</li>
 </ul> 
 
 </td>
@@ -92,9 +96,14 @@ The <a href="https://ai2.appinventor.mit.edu/reference/components/animation.html
 <td>
 
 <h5>From the completed project in the <span>Blocks</span></h5>
+<a href="https://ai2.appinventor.mit.edu/reference/components/maps.html#Marker">Marker</a>s (pins) can be added to <a href="https://ai2.appinventor.mit.edu/reference/components/maps.html#Map">Map</a>s under programmatic control, but must be kept track of.
 <ul>
 <li>The <em>Map1.LongPressAtPoint</em> event initializes the local variable <em>pin</em> with the result of the call to <em>Map1.CreateMarker</em> using the <code>latitude</code> and <code>longitude</code> parameters.</li>
-<li>With <em>Any Marker</em> from the <em>Any component</em> drawer within the local variable block, use <em>setMarker.EnableInfoBox</em> with the value of the <em>pin</em> local variable as the <code>of component</code> parameter and <code>true</code> as the <code>to</code> parameter &mdash; thereby enabling the <a href="https://ai2.appinventor.mit.edu/reference/components/maps.html#Map">infobox window display</a> when the user taps the <em>Marker</em>.</li>
+</ul>
+<a href="https://ai2.appinventor.mit.edu/reference/other/any-component-blocks.html">Any Component Blocks</a> can manage properties, handle events, and call procedures of <em>any</em> component with a reference &mdash; in this case to manage the <a href="https://ai2.appinventor.mit.edu/reference/components/maps.html#Marker">infobox window display</a> property.
+<ul>
+<li>With <em>Any Marker</em> from the <em>Any component</em> drawer, use <em>setMarker.Draggable</em> with the value of the <em>pin</em> local variable as the <code>of component</code> parameter and <code>false</code> as the <code>to</code> parameter &mdash; thereby fixing its position.</li>
+<li>With <em>Any Marker</em> from the <em>Any component</em> drawer, use <em>setMarker.EnableInfoBox</em> with the value of the <em>pin</em> local variable as the <code>of component</code> parameter and <code>true</code> as the <code>to</code> parameter &mdash; thereby enabling the <a href="https://ai2.appinventor.mit.edu/reference/components/maps.html#Marker">infobox window display</a> (including the <em>Title</em>) when the user taps the <em>Marker</em>.</li>
 <li>With <em>Any Marker</em> from the <em>Any component</em> drawer within the local variable block, use <em>setMarker.Title</em> with the value of the <em>pin</em> local variable as the <code>of component</code> parameter and a <em>Text</em> <em>join</em> of two values as the <code>to</code> parameter: <ul><li>the rounded result of a call to <em>Marker.DistanceToPoint</em> from <em>Any Marker</em> in the <em>Any component</em> drawer with the value of the <em>pin</em> local variable as the <code>of component</code> parameter, the value of the <em>MarkerMcMillen.Latitude</em> property as the <code>latitude</code> parameter, and the value of the <em>MarkerMcMillen.Longitude</em> property as the <code>longitude</code> parameter and;</li><li>the text <code>" meters to McMillen"</code>.</li></ul></li>
 </ul> 
 
@@ -115,6 +124,7 @@ The <a href="https://ai2.appinventor.mit.edu/reference/components/animation.html
 <td>
 
 <h5>From the starter project in the <span>Designer</span></h5>
+There are typical ways to set up user-interface components in a project, including using <a href="https://ai2.appinventor.mit.edu/reference/components/layout.html#HorizontalArrangement">HorizontalArrangement</a>s to arrange components side-by-side and <code>Width: Fill Parent...</code> to space evenly. The three <a href="https://ai2.appinventor.mit.edu/reference/components/layout.html#HorizontalArrangement">HorizontalArrangement</a>s each contain a label and a user-interface component to create the prompt for <em>ChatBot1</em>.
 <ul>
 <li><em>Screen1</em> is set to <code>Title: GoodReader</code> &mdash; as are all project titles.</li>
 <li><em>HorizontalArrangement1</em> is set to <code>Width: Fill Parent...</code> and has two components within it.
@@ -143,6 +153,9 @@ The <a href="https://ai2.appinventor.mit.edu/reference/components/animation.html
 </ul>
 
 </li>
+</ul>
+To interact with a <a href="https://ai2.appinventor.mit.edu/reference/components/experimental.html#ChatBot">ChatBot</a> requires configuration (<code>ApiKey</code>, <code>Model</code>, <code>Provider</code>) and a <a href="https://ai2.appinventor.mit.edu/reference/components/userinterface.html#Label">Label</a> to display the response.
+<ul>
 <li><em>LabelResponse</em> is set to <code>Width: Fill Parent...</code>, <code>Text:</code>.</li>
 <li><em>ChatBot1</em> (non-visible component) is set with an <code>ApiKey</code> and <code>Provider: gemini</code>.</li>
 </ul> 
@@ -154,7 +167,7 @@ The <a href="https://ai2.appinventor.mit.edu/reference/components/animation.html
 <ul>
 <li>Use of <em>for each item in list</em> from the <em>Control</em> drawer to iterate over each item of a list.</li>
 <li>Using <em>Screen1.Initialize</em> to initialize user-interface component properties &mdash; rather than setting them in the designer. In this case using <em>Any Label</em> from the <em>Any component</em> drawer to set the <em>WidthPercent</em> of <em>Label1</em>, <em>Label2</em>, and <em>Label3</em> and to set the <em>FontSize</em> of <em>every Label</em> (available in <em>Any Label</em> from the <em>Any component</em> drawer).</li>
-<li>Set <em>LabelAge.Text</em> to the initial <em>SliderAge.ThumbPosition</em>.</li>
+<li>Set <em>LabelAge.Text</em> to the initial <em>SliderAge.ThumbPosition</em> value.</li>
 </ul>
 
 <br><img src="./images/MapStarter-ideb-Screen1.Initialize.png" alt="MapStarter Screen1.Initialize blocks"></li>
@@ -167,6 +180,7 @@ The <a href="https://ai2.appinventor.mit.edu/reference/components/animation.html
 <td>
 
 <h5>From the completed project in the <span>Designer</span></h5>
+The starter code includes components for creating a prompt for <em>ChatBot1</em> &mdash; add <em>HorizontalArrangement4</em> and components for interacting with <em>ChatBot1</em>.
 <ul>
 <li>Added <em>HorizontalArrangement4</em> set to <code>Width: Fill Parent...</code> and has two components within it:
 
@@ -179,19 +193,20 @@ The <a href="https://ai2.appinventor.mit.edu/reference/components/animation.html
 </ul>
 
 <h5>From the completed project in the <span>Blocks</span></h5>
+Property modifications for <em>every Button</em> can also be added to <em>Screen1.Initialize</em>.
 <ul>
 <li>Add to the <em>Screen1.Initialize</em> event a <em>for each item in list</em> block from the <em>Control</em> drawer to iterate over each item of the <em>every Button</em> list (available in <em>Any Button</em> from the <em>Any component</em> drawer) to set the <em>FontSize</em> and <em>FontBold</em> of every button.</li>
+</ul>
+The value of a <a href="https://ai2.appinventor.mit.edu/reference/components/userinterface.html#Slider">Slider</a>'s thumb position is only visible if displayed.
+<ul>
 <li>Add a <em>SliderAge.PositionChanged</em> event that sets <em>LabelAge.Text</em> to <em>SliderAge.ThumbPosition</em>.</li>
-<li>Add code to interact with <em>ChatBot1</em>.
-
+</ul>
+Add code to interact with <em>ChatBot1</em>. The project illustrates several techniques for smooth interactions with a generative AI <a href="https://ai2.appinventor.mit.edu/reference/components/experimental.html#ChatBot">ChatBot</a>.
 <ul>
 <li>Add <em>ButtonSubmit.Click</em> event to call <em>Chatbot1.Converse</em> with the prompt, to set <em>LabelResponse.Text</em> to <code>""</code> (to clear any previous response and indicate that the chatbot is 'thinking'), to set <em>ButtonSubmit.Enabled</em> to <code>false</code> (to disable the button and prevent multiple queries), and to set <em>ButtonSubmit.TextColor</em> to <code>gray</code> (to 'gray it out').</li>
 <li>Add <em>ChatBot1.GotResponse</em> event to set <em>LabelResponse.Text</em> to the <code>responseText</code> parameter (to display the response), set <em>ButtonSubmit.Enabled</em> to <code>true</code> (to enable the button for the next query), and set <em>ButtonSubmit.TextColor</em> to <code>black</code>. <strong>It is vital that <em>ButtonSubmit.Enabled</em> is set to <code>true</code> in both chatbot events or the app could cease working.</strong></li>
 <li>Add <em>ChatBot1.ErrorOccured</em> event to set <em>LabelResponse.Text</em> to the <code>responseText</code> parameter (to display the error), set <em>ButtonSubmit.Enabled</em> to <code>true</code> (to enable the button for the next query), and set <em>ButtonSubmit.TextColor</em> to <code>black</code>. <strong>It is vital that <em>ButtonSubmit.Enabled</em> is set to <code>true</code> in both chatbot events or the app could cease working.</strong></li>
 <li>Add <em>ButtonNew.Click</em> event to call <em>Chatbot1.ResetConversation</em> and to set <em>LabelResponse.Text</em> to <code>""</code> (to clear any previous response).</li>
-</ul>
-
-</li>
 </ul>
 
 </td>
