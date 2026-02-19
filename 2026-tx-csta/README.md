@@ -15,13 +15,13 @@ These apps are starter [MIT App Inventor](http://ai2.appinventor.mit.edu/) apps 
 
 ## Projects
 
-The [MIT App Inventor](http://ai2.appinventor.mit.edu/) block code for the completed apps is below.
+The *What we learned* sections (starter project and completed project) and the [MIT App Inventor](http://ai2.appinventor.mit.edu/) block code for the completed apps is below.
 
 <style>
 table { width: 100%; }
 .wwl tr > td:first-child { width: 50%; }
 .wwl img { width: 100%; }
-li { list-style-type: square; font-size: small; }
+td { list-style-type: square; font-size: small; }
 span { background-color: #bcdb74; border-radius: 8px; padding: 2px 6px; }
 </style>
 
@@ -34,18 +34,22 @@ span { background-color: #bcdb74; border-radius: 8px; padding: 2px 6px; }
 <td>
 
 <h5>From the starter project in the <span>Designer</span></h5>
+There are typical ways to set up user-interface components in a project.
 <ul>
 <li><em>Screen1</em> is set to <code>Title: Doodle</code> &mdash; as are all project titles.</li>
 <li><em>Canvas1</em> is set to <code>Width: Fill Parent...</code> and <code>Height: Fill Parent...</code> to fill out the <em>Screen1</em> extent.</li>
-<li><em>HorizontalArrangement1</em> is set to <code>Visible: &#x2610;</code> rendering it invisible.</li>
 <li><em>HorizontalArrangement1</em> is set to <code>Width: Fill Parent...</code> for when it is made visible.</li>
-</ul> 
-
+</ul>
+Visible components have a <code>visible</code> property that can be used to hide / show parts of the user interface.
+<ul>
+<li><em>HorizontalArrangement1</em> is set to <code>Visible: &#x2610;</code> rendering it invisible.</li>
+</ul>
 </td>
 
 <td>
 
 <h5>From the completed project in the <span>Designer</span></h5>
+By default, user-interface components stack vertically, so use a <a href="https://ai2.appinventor.mit.edu/reference/components/layout.html#HorizontalArrangement">HorizontalArrangement</a> to arrange added components side-by-side and <code>Width: Fill Parent...</code> to space evenly.
 <ul>
 <li>Set <em>HorizontalArrangement1</em> to <code>Visible: &#x2612;</code> rendering it visible.</li>
 <li>Added <em>ButtonClear</em> to <em>HorizontalArrangement1</em> (and named it) set to <code>Text: Clear</code>.</li>
@@ -53,6 +57,7 @@ span { background-color: #bcdb74; border-radius: 8px; padding: 2px 6px; }
 </ul> 
 
 <h5>From the completed project in the <span>Blocks</span></h5>
+The <a href="https://ai2.appinventor.mit.edu/reference/components/animation.html#Canvas">Canvas</a> component has many procedures for drawing and managing the image. The thumb-position value of a <a href="https://ai2.appinventor.mit.edu/reference/components/userinterface.html#Slider">Slider</a> can change the behavior of an app.
 <ul>
 <li>The <em>Canvas1.Dragged</em> event calls <em>Canvas1.DrawLine</em> with the proper <a href="https://ai2.appinventor.mit.edu/reference/components/animation.html#Canvas">parameters</a>.</li>
 <li>The <em>ButtonClear.Clicked</em> event calls <em>Canvas1.Clear</em>.</li>
@@ -234,7 +239,7 @@ span { background-color: #bcdb74; border-radius: 8px; padding: 2px 6px; }
 <li>The value for the <em>TextBoxItem.Text</em> property.</li>
 </ul>
 
-This is the row that will be added to the shared worksheet with <em>Spreadsheet1.AddRow</em></li>
+This is the row that will be added to the shared worksheet with <em>Spreadsheet1.AddRow</em>.</li>
 <img src="./images/JournalStarter-blocks.png" alt="JournalStarter blocks">
 </ul>
 
