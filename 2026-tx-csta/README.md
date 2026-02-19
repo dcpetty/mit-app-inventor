@@ -65,7 +65,7 @@ span { background-color: #bcdb74; border-radius: 8px; padding: 2px 6px; }
 
 #### Code
 
-<img src="./Doodle-blocks.png" alt="Doodle blocks">
+<img src="./images/Doodle-blocks.png" alt="Doodle blocks">
 
 ### Map
 
@@ -99,7 +99,7 @@ span { background-color: #bcdb74; border-radius: 8px; padding: 2px 6px; }
 
 #### Code
 
-<img src="./Map-blocks.png" alt="Doodle blocks">
+<img src="./images/Map-blocks.png" alt="Doodle blocks">
 
 ### GoodReader
 
@@ -139,7 +139,7 @@ span { background-color: #bcdb74; border-radius: 8px; padding: 2px 6px; }
 
 </li>
 <li><em>LabelResponse</em> is set to <code>Width: Fill Parent...</code>, <code>Text:</code>.</li>
-<li><em>ChatBot1</em> is set with an <code>ApiKey</code> and <code>Provider: gemini</code>.</li>
+<li><em>ChatBot1</em> (non-visible component) is set with an <code>ApiKey</code> and <code>Provider: gemini</code>.</li>
 </ul> 
 
 <h5>From the starter project in the <span>Blocks</span></h5>
@@ -152,9 +152,9 @@ span { background-color: #bcdb74; border-radius: 8px; padding: 2px 6px; }
 <li>Set <em>LabelAge.Text</em> to the initial <em>SliderAge.ThumbPosition</em>.</li>
 </ul>
 
-<br><img src="./MapStarter-ideb-Screen1.Initialize.png" alt="MapStarter Screen1.Initialize blocks"></li>
+<br><img src="./images/MapStarter-ideb-Screen1.Initialize.png" alt="MapStarter Screen1.Initialize blocks"></li>
 <li>An Unconnected <em>Chatbot1.Converse</em> call illustrates the GoodReader prompt strategy using <em>SpinnerQuestionType.Selection</em>, <em>SliderAge.ThumbPosition</em>, and <em>TextBoxBook.Text</em>.
-<br><img src="./MapStarter-ideb-ChatBot1.Converse.png" alt="MapStarter ChatBot1.Converse blocks"></li>
+<br><img src="./images/MapStarter-ideb-ChatBot1.Converse.png" alt="MapStarter ChatBot1.Converse blocks"></li>
 </ul>
 
 </td>
@@ -195,11 +195,63 @@ span { background-color: #bcdb74; border-radius: 8px; padding: 2px 6px; }
 
 #### Code
 
-<img src="./GoodReader-blocks.png" alt="Doodle blocks">
+<img src="./images/GoodReader-blocks.png" alt="Doodle blocks">
 
 ### Journal
 
-<img src="./Journal-blocks.png" alt="Doodle blocks">
+#### What we learned
+
+<table class="wwl"><tr>
+
+<td>
+
+<h5>From the starter project in the <span>Designer</span></h5>
+<ul>
+<li><em>Screen1</em> is set to <code>Title: Journal</code> &mdash; as are all project titles.</li>
+<li><em>HorizontalArrangement1</em> is set to <code>Width: Fill Parent...</code> and has two components within it.
+
+<ul>
+<li><em>ButtonSave</em> is set to <code>Text: Save</code>.</li>
+<li><em>TextBoxItem</em> is set to <code>Width: Fill Parent...</code>.</li>
+</ul>
+
+</li>
+<li><em>Label1</em> is set to <code>Width: Fill Parent...</code> and <code>Text: Journal...</code>.</li>
+<li><em>Spreadsheet1</em> (non-visible component) is set with <em>ApplicationName: Journal</em>, a <code>CredentialsJson</code>, and <code>SpreadsheetID</code> matching the id of the <a href="https://docs.google.com/spreadsheets/d/16-hA2pixAtVlUXWVXWUHK21pBuEiZXZhDDnSW-uHg7E/">shared spreadsheet</a> &mdash; which has given <code>Edit</code> access to the e-mail address associated with the Json credentials as described <a href="https://docs.google.com/document/d/10PcV0WGgtedebzxn1H1tu58BP1cSFOIVSUGPwVQ_rsQ/">here</a>.</li>
+<li><em>Clock1</em> (non-visible component) has no special settings and is used only for procedures <em>Clock1.FormatDateTime</em> and <em>Clock1.Now</em>.</li>
+<li><em>ChatBot1</em> (non-visible component) is set with an <code>ApiKey</code> and <code>Provider: gemini</code>.</li>
+</ul>
+
+<h5>From the starter project in the <span>Blocks</span></h5>
+<ul>
+<li>Initialize the global variable <em>sheet</em> (from the <em>Variables</em> from the <em>Built-in</em> drawer) to <code>"CHANGE"</code>. This is the shared worksheet within the shared Google Sheet and should be changed to suit the user.</li>
+<li>The <em>Screen1.Initialize</em> event calls <em>Sheet1.AddSheet</em> with the value of the global variable <em>sheet</em> as the <code>sheetName</code> parameter.
+<li>The <em>makeRow</em> procedure returns a three-item list corresponding to three columns in the shared worksheet:
+
+<ul>
+<li>A formatted date and time (<a href="https://man7.org/linux/man-pages/man3/strftime.3.html"><code>"yyyy-MM-dd HH:mm:ss"</code></a>)</li>
+<li>The text <code>"DAVID"</code>.</li>
+<li>The value for the <em>TextBoxItem.Text</em> property.</li>
+</ul>
+
+This is the row that will be added to the shared worksheet with <em>Spreadsheet1.AddRow</em></li>
+</ul>
+<img src="./images/JournalStarter-blocks.png" alt="JournalStarter blocks">
+</td>
+<td>
+
+<h5>From the completed project in the <span>Designer</span></h5>
+<ul>
+<li></li>
+</ul>
+
+</td>
+
+</tr></table>
+
+#### Code
+
+<img src="./images/Journal-blocks.png" alt="Doodle blocks">
 
 <hr>
 
