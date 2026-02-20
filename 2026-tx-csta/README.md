@@ -251,13 +251,13 @@ The blocks in the JournalStarter project illustrate several <a href="https://app
 <img src="./images/JournalStarter-blocks.png" alt="JournalStarter blocks">
 <ul>
 <li>Initialize the global variable <em>sheet</em> (from the <em>Variables</em> from the <em>Built-in</em> drawer) to <code>"CHANGE"</code>. This is the shared worksheet within the shared Google Sheet and should be changed to suit the user.</li>
-<li>The <em>Screen1.Initialize</em> event calls <em>Sheet1.AddSheet</em> with the value of the global variable <em>sheet</em> as the <code>sheetName</code> parameter.</li>
-<li>The <em>Sheet1.ErrorOccured</em> event uses an <em>if-then</em> block to filter the <code>errorMessage</code> parameter on the text phrase <code>"already exists"</code> to trap duplicate <em>Sheet1.AddSheet</em> attempts.</li>
+<li>The <em>Screen1.Initialize</em> event calls <em>Spreadsheet1.AddSheet</em> with the value of the global variable <em>sheet</em> as the <code>sheetName</code> parameter.</li>
+<li>The <em>Spreadsheet1.ErrorOccured</em> event uses an <em>if-then</em> block to filter the <code>errorMessage</code> parameter on the text phrase <code>"already exists"</code> to trap duplicate <em>Spreadsheet1.AddSheet</em> attempts.</li>
 <li>The <em>makeRow</em> procedure returns a three-item list corresponding to three columns in the shared worksheet:
 
 <ul>
 <li>A formatted date and time (<a href="https://man7.org/linux/man-pages/man3/strftime.3.html"><code>"yyyy-MM-dd HH:mm:ss"</code></a>)</li>
-<li>The text <code>"DAVID"</code>.</li>
+<li>The text <code>"YOUR NAME"</code>.</li>
 <li>The value for the <em>TextBoxItem.Text</em> property.</li>
 </ul>
 
@@ -268,9 +268,13 @@ This is the row that will be added to the shared worksheet with <em>Spreadsheet1
 
 <td>
 
-<h5>From the completed project in the <span>Designer</span></h5>
+<h5>From the completed project in the <span>Blocks</span></h5>
+Many <a href="">MIT App Inventor</a> components use the protocol where a component <em>procedure</em> generates an <a href="https://en.wikipedia.org/wiki/Asynchrony_(computer_programming)">asynchronous</a> <em>event</em> &mdash; a two-step process used by <em>Spreadsheet1</em> and <em>ChatBot1</em>. In this case submitting a journal entry adds a row to <em>Spreadsheet1</em>, which in turn is queried for <em>all</em> journal entries and submitted to <em>ChatBot1</em> for a summary, whose result is displayed in <em>Label1</em>.
 <ul>
-<li></li>
+<li><em>ButtonSave.Click</em> event calls <em>Spreadsheet1.AddRow</em> with the value of <code>global sheet</code> and the result of a call to <code>makeRow</code> as parameters.</li>
+<li>The <em>Spreadsheet1.FinishedAddRow</em> event (the result of <em>Spreadsheet1.AddRow</em>) calls <em>Spreadsheet1.ReadSheet</em> with the value of <code>global sheet</code> as its <code>sheetName</code> parameter to read the entire worksheet.</li>
+<li>The <em>Spreadsheet1.GotSheetData</em> event (the result of <em>Spreadsheet1.ReadSheet</em>) calls <em>ChatBot1.Converse</em> with a prompt consisting of the entire worksheet, prefaced with the text <code>"Summarize this list of items: "</code> as its <code>question</code> parameter. In addition, <em>ButtonSaved.Enabled</em> is set to <code>false</code> to disable it.</li>
+<li>The <em>ChatBot1.GotResponse</em> and <em>ChatBot1.ErrorOccured</em> events (the possible results of <em>ChatBot1.Converse</em>) both display the <code>responseText</code> in <em>Label1.Text</em> and set <em>ButtonSaved.Enabled</em> to <code>true</code> to reenable it.</li>
 </ul>
 
 </td>
