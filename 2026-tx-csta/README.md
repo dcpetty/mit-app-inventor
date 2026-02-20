@@ -162,7 +162,7 @@ To interact with a <a href="https://ai2.appinventor.mit.edu/reference/components
 
 <h5>From the starter project in the <span>Blocks</span></h5>
 <ul>
-<li>The blocks in the <em>Screen1.Initialize</em> event illustrate several coding idioms in <a href="https://appinventor.mit.edu/">MIT App Inventor</a>:
+<li>The blocks in the <em>Screen1.Initialize</em> event illustrate several <a href="https://appinventor.mit.edu/">MIT App Inventor</a> coding idioms:
 
 <ul>
 <li>Use of <em>for each item in list</em> from the <em>Control</em> drawer to iterate over each item of a list.</li>
@@ -171,7 +171,7 @@ To interact with a <a href="https://ai2.appinventor.mit.edu/reference/components
 </ul>
 
 <br><img src="./images/MapStarter-ideb-Screen1.Initialize.png" alt="MapStarter Screen1.Initialize blocks"></li>
-<li>An Unconnected <em>Chatbot1.Converse</em> call illustrates the GoodReader prompt strategy using <em>SpinnerQuestionType.Selection</em>, <em>SliderAge.ThumbPosition</em>, and <em>TextBoxBook.Text</em>.
+<li>An unconnected <em>Chatbot1.Converse</em> call illustrates the GoodReader prompt strategy using <em>SpinnerQuestionType.Selection</em>, <em>SliderAge.ThumbPosition</em>, and <em>TextBoxBook.Text</em>.
 <br><img src="./images/MapStarter-ideb-ChatBot1.Converse.png" alt="MapStarter ChatBot1.Converse blocks"></li>
 </ul>
 
@@ -226,6 +226,7 @@ Add code to interact with <em>ChatBot1</em>. The project illustrates several tec
 <td>
 
 <h5>From the starter project in the <span>Designer</span></h5>
+There are typical ways to set up user-interface components in a project, including using <a href="https://ai2.appinventor.mit.edu/reference/components/layout.html#HorizontalArrangement">HorizontalArrangement</a>s to arrange components side-by-side and <code>Width: Fill Parent...</code> to space evenly. In this case <em>HorizontalArrangement1</em> contains a <em>ButtonSave</em> (to save each journal entry) and a <em>TextBoxItem</em> (to enter the text for each journal entry). And <em>Label1</em> is to display feedback.
 <ul>
 <li><em>Screen1</em> is set to <code>Title: Journal</code> &mdash; as are all project titles.</li>
 <li><em>HorizontalArrangement1</em> is set to <code>Width: Fill Parent...</code> and has two components within it.
@@ -237,15 +238,21 @@ Add code to interact with <em>ChatBot1</em>. The project illustrates several tec
 
 </li>
 <li><em>Label1</em> is set to <code>Width: Fill Parent...</code> and <code>Text: Journal...</code>.</li>
-<li><em>Spreadsheet1</em> (non-visible component) is set with <em>ApplicationName: Journal</em>, a <code>CredentialsJson</code>, and <code>SpreadsheetID</code> matching the id of the <a href="https://docs.google.com/spreadsheets/d/16-hA2pixAtVlUXWVXWUHK21pBuEiZXZhDDnSW-uHg7E/">shared spreadsheet</a> &mdash; which has given <code>Edit</code> access to the e-mail address associated with the Json credentials as described <a href="https://docs.google.com/document/d/10PcV0WGgtedebzxn1H1tu58BP1cSFOIVSUGPwVQ_rsQ/">here</a>.</li>
+</ul>
+This app include a variety of non-visible components for special functions.
+<ul>
+<li><em>Spreadsheet1</em> (non-visible component) holds the journal entries and is set with <em>ApplicationName: Journal</em>, a <code>CredentialsJson</code>, and <code>SpreadsheetID</code> matching the id of the <a href="https://docs.google.com/spreadsheets/d/16-hA2pixAtVlUXWVXWUHK21pBuEiZXZhDDnSW-uHg7E/">shared spreadsheet</a> &mdash; which has given <code>Edit</code> access to the e-mail address associated with the Json credentials as described <a href="https://docs.google.com/document/d/10PcV0WGgtedebzxn1H1tu58BP1cSFOIVSUGPwVQ_rsQ/">here</a>.</li>
 <li><em>Clock1</em> (non-visible component) has no special settings and is used only for procedures <em>Clock1.FormatDateTime</em> and <em>Clock1.Now</em>.</li>
 <li><em>ChatBot1</em> (non-visible component) is set with an <code>ApiKey</code> and <code>Provider: gemini</code>.</li>
 </ul>
 
 <h5>From the starter project in the <span>Blocks</span></h5>
+The blocks in the JournalStarter project illustrate several <a href="https://appinventor.mit.edu/">MIT App Inventor</a> coding idioms, including global variables, procedures, and <a href="https://en.wikipedia.org/wiki/Conditional_(computer_programming)">selection</a>.
+<img src="./images/JournalStarter-blocks.png" alt="JournalStarter blocks">
 <ul>
 <li>Initialize the global variable <em>sheet</em> (from the <em>Variables</em> from the <em>Built-in</em> drawer) to <code>"CHANGE"</code>. This is the shared worksheet within the shared Google Sheet and should be changed to suit the user.</li>
 <li>The <em>Screen1.Initialize</em> event calls <em>Sheet1.AddSheet</em> with the value of the global variable <em>sheet</em> as the <code>sheetName</code> parameter.</li>
+<li>The <em>Sheet1.ErrorOccured</em> event uses an <em>if-then</em> block to filter the <code>errorMessage</code> parameter on the text phrase <code>"already exists"</code> to trap duplicate <em>Sheet1.AddSheet</em> attempts.</li>
 <li>The <em>makeRow</em> procedure returns a three-item list corresponding to three columns in the shared worksheet:
 
 <ul>
@@ -255,7 +262,6 @@ Add code to interact with <em>ChatBot1</em>. The project illustrates several tec
 </ul>
 
 This is the row that will be added to the shared worksheet with <em>Spreadsheet1.AddRow</em>.</li>
-<img src="./images/JournalStarter-blocks.png" alt="JournalStarter blocks">
 </ul>
 
 </td>
