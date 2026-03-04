@@ -8,7 +8,7 @@ These apps are starter [MIT App Inventor](http://ai2.appinventor.mit.edu/) apps 
 
 | App | .AIA | Description |
 | --- | --- | --- |
-| [TellMeAJoke](https://dcpetty.dev/mit-app-inventor/2026-csforca-virtual/#tellmeajoke) | <a href="https://code.appinventor.mit.edu/?repo=https://raw.githubusercontent.com/dcpetty/mit-app-inventor/refs/heads/main/2026-csforca-virtual/TellMeAJoke.aia"><img src="../codi-32x32.png" alt="codi" style="vertical-align: middle;"><code>TellMeAJoke.aia</code></a> | A basic generative AI chatbot app. |
+| [TellMeAJoke](https://dcpetty.dev/mit-app-inventor/2026-csforca-virtual/#tellmeajoke) | <a href="https://code.appinventor.mit.edu/?repo=https://raw.githubusercontent.com/dcpetty/mit-app-inventor/refs/heads/main/2026-csforca-virtual/TellMeAJokeStarter.aia"><img src="../codi-32x32.png" alt="codi" style="vertical-align: middle;"><code>TellMeAJoke.aia</code></a> | A basic generative AI chatbot app. |
 | [Doodle](https://dcpetty.dev/mit-app-inventor/2026-csforca-virtual/#doodle) | <a href="https://code.appinventor.mit.edu/?repo=https://raw.githubusercontent.com/dcpetty/mit-app-inventor/refs/heads/main/2026-csforca-virtual/DoodleStarter.aia"><img src="../codi-32x32.png" alt="codi" style="vertical-align: middle;"><code>DoodleStarter.aia</code></a> | A basic drawing app. |
 | [Map](https://dcpetty.dev/mit-app-inventor/2026-csforca-virtual/#map) | <a href="https://code.appinventor.mit.edu/?repo=https://raw.githubusercontent.com/dcpetty/mit-app-inventor/refs/heads/main/2026-csforca-virtual/MapStarter.aia"><img src="../codi-32x32.png" alt="codi" style="vertical-align: middle;"><code>MapStarter.aia</code></a> | A basic mapping app that calculates ([great circle](https://en.wikipedia.org/wiki/Great_circle)) distances between locations. |
 | [GoodReader](https://dcpetty.dev/mit-app-inventor/2026-csforca-virtual/#goodreader) | <a href="https://code.appinventor.mit.edu/?repo=https://raw.githubusercontent.com/dcpetty/mit-app-inventor/refs/heads/main/2026-csforca-virtual/GoodReaderStarter.aia"><img src="../codi-32x32.png" alt="codi" style="vertical-align: middle;"><code>GoodReaderStarter.aia</code></a> | Use a generative artificial intelligence [ChatBot](https://gemini.google.com/app) to encourage critical reading skills. |
@@ -66,6 +66,10 @@ Visible and non-visible <a href="https://ai2.appinventor.mit.edu/reference/compo
 
 </tr></table>
 
+#### Design
+
+<img src="./images/TellMeAJoke-ided.png" alt="Doodle blocks">
+
 #### Code
 
 <img src="./images/TellMeAJoke-blocks.png" alt="Doodle blocks">
@@ -113,6 +117,10 @@ The <a href="https://ai2.appinventor.mit.edu/reference/components/animation.html
 
 </tr></table>
 
+#### Design
+
+<img src="./images/Doodle-ided.png" alt="Doodle blocks">
+
 #### Code
 
 <img src="./images/Doodle-blocks.png" alt="Doodle blocks">
@@ -155,6 +163,10 @@ There are typical ways to set up user-interface components in a project.
 </td>
 
 </tr></table>
+
+#### Design
+
+<img src="./images/Map-ided.png" alt="Doodle blocks">
 
 #### Code
 
@@ -258,6 +270,10 @@ The project illustrates several code techniques for smooth interactions with a g
 
 </tr></table>
 
+#### Design
+
+<img src="./images/GoodReader-ided.png" alt="Doodle blocks">
+
 #### Code
 
 <img src="./images/GoodReader-blocks.png" alt="Doodle blocks">
@@ -325,6 +341,10 @@ Many <a href="">MIT App Inventor</a> components use the protocol where a compone
 </td>
 
 </tr></table>
+
+#### Design
+
+<img src="./images/Journal-ided.png" alt="Doodle blocks">
 
 #### Code
 
