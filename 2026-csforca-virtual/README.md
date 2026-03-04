@@ -129,11 +129,11 @@ The <a href="https://ai2.appinventor.mit.edu/reference/components/animation.html
 There are typical ways to set up user-interface components in a project.
 <ul>
 <li><em>Screen1</em> is set to <code>Title: Map</code> &mdash; as are all project titles.</li>
-<li><em>Map1</em> is set to <code>Width: Fill Parent...</code> and <code>Height: Fill Parent...</code> to fill out the <em>Screen1</em> extent.</li>
+<li><em>Map1</em> is set to <code>Width: Fill Parent...</code> and <code>Height: Fill Parent...</code> (to fill out the <em>Screen1</em> extent), <code>CenterFromString: 37.166,-119.449</code> (<a href="https://desertsun.com/story/news/nation/california/2025/03/21/where-is-the-geographic-center-of-california-madera-county/79465100007/">the geographical center of California</a>), and <code>ZoomLevel: 8</code> (to feature more of the state).</li>
 </ul>
 <a href="https://ai2.appinventor.mit.edu/reference/components/maps.html#Marker">Marker</a>s (pins) can be added to <a href="https://ai2.appinventor.mit.edu/reference/components/maps.html#Map">Map</a>s in Designer. 
 <ul>
-<li><em>MarkerMcMillen</em> is set to <code>FillColor: Blue</code> (because the default is <code>Red</code>), <code>Latitude: 33.028</code> (the latitude of <a href="https://mcmillen.pisd.edu/">McMillen High School</a>, <code>Longitude:  -96.611</code> (the longitude of <a href="https://mcmillen.pisd.edu/">McMillen High School</a>), and <code>Draggable: &#x2610;</code> (so it will remain fixed).</li>
+<li><em>MarkerCACenter</em> is set to <code>FillColor: Blue</code> (because the default is <code>Red</code>), <code>Latitude: 37.166</code> (the latitude of <a href="https://www.google.com/maps/place/Geographic+Center+of+California/@37.166111,-119.5899059,11z/data=!4m6!3m5!1s0x80943363a410754b:0xde2928afd6cab2ec!8m2!3d37.166111!4d-119.449444!16s%252Fg%252F11cm073213">the geographical center of California</a>), <code>Longitude: -119.449</code> (the longitude of <a href="https://www.google.com/maps/place/Geographic+Center+of+California/@37.166111,-119.5899059,11z/data=!4m6!3m5!1s0x80943363a410754b:0xde2928afd6cab2ec!8m2!3d37.166111!4d-119.449444!16s%252Fg%252F11cm073213">the geographical center of California</a>), and <code>Draggable: &#x2610;</code> (so it will remain fixed).</li>
 </ul> 
 
 </td>
