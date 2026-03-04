@@ -50,16 +50,18 @@ Visible and non-visible <a href="https://ai2.appinventor.mit.edu/reference/compo
 <ul>
 <li>Added <em>Button1</em> set to <code>Text: Tell me a joke!</code>.</li>
 <li>Added <em>Label1</em> set to <code>Width: Fill Parent...</code> and <code>Text: Joke...</code>.</li>
-<li>Added <em>ChatBot1</em> (non-visible component) set with (the default) <code>Provider: chatgpt</code>.</li></ul>
+<li>Added <em>ChatBot1</em> (non-visible component) set with (the default) <code>Provider: chatgpt</code>.</li>
+</ul>
 
 <h5>From the completed project in the <span>Blocks</span></h5>
-<p>Many <a href="">MIT App Inventor</a> components use the protocol where a component <em>procedure</em> generates an <a href="https://en.wikipedia.org/wiki/Asynchrony_(computer_programming)">asynchronous</a> <em>event</em> &mdash; a two-step process used by <em>ChatBot1</em>. In this case submitting a question to <em>ChatBot1</em> for a joke &#8594; whose result is displayed in <em>Label1</em>.
-<p>Because <em>Chatbot1</em> takes some time to respond when 'thinking,' part of this protocol is to limit submissions to <em>Chatbot1.Converse</em> until a response is received with either <em>Chatbot1.GotResponse</em> or <em>Chatbot1.ErrorOccured</em> events. 
+<p>Many <a href="">MIT App Inventor</a> components use the protocol where a component <em>procedure</em> generates an <a href="https://en.wikipedia.org/wiki/Asynchrony_(computer_programming)">asynchronous</a> <em>event</em> &mdash; a two-step process used by <em>ChatBot1</em>. In this case submitting a question to <em>ChatBot1</em> for a joke &#8594; whose result is displayed in <em>Label1</em>.</p>
+<p>Because <em>Chatbot1</em> takes some time to respond when 'thinking,' part of this protocol is to limit submissions to <em>Chatbot1.Converse</em> until a response is received with either <em>Chatbot1.GotResponse</em> or <em>Chatbot1.ErrorOccured</em> events.</p>
 <ul>
 <li>Add <em>Button1.Click</em> event to call <em>Chatbot1.Converse</em> with the <code>question</code> parameter set to <code>"Tell me a PG joke that I haven't heard before"</code>, to set <em>Label1.Text</em> to <code>"Thinking..."</code> (to clear any previous response and indicate that the chatbot is 'thinking'), and to set <em>Button1.Enabled</em> to <code>false</code> (to disable the button and prevent multiple queries).</li>
 <li>Add <em>ChatBot1.GotResponse</em> event to set <em>Label1.Text</em> to the <code>responseText</code> parameter (to display the response) and set <em>Button1.Enabled</em> to <code>true</code> (to enable the button for the next query). <strong>It is vital that <em>ButtonSubmit.Enabled</em> is set to <code>true</code> in both chatbot events or the app could cease working.</strong></li>
 <li>Add <em>ChatBot1.ErrorOccured</em> event to set <em>Label1.Text</em> to the <code>responseText</code> parameter (to display the error) and set <em>Button1.Enabled</em> to <code>true</code> (to enable the button for the next query). <strong>It is vital that <em>ButtonSubmit.Enabled</em> is set to <code>true</code> in both chatbot events or the app could cease working.</strong></li>
 </ul>
+
 </td>
 
 </tr></table>
