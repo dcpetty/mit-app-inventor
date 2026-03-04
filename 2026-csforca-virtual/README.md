@@ -1,0 +1,341 @@
+# 2026-csforca-virtual
+
+## About these apps
+
+These apps are starter [MIT App Inventor](http://ai2.appinventor.mit.edu/) apps as presented at the [2026 Texas CSTA Regional Conference](https://docs.google.com/document/d/1s8OYp63AiIemV9x0erBY7EYnq_CWUQXRzCJBEfejxKU/). The slides accompanying this presentation are available at [https://aif.to/2026-csforca-virtual](https://aif.to/2026-csforca-virtual).
+
+## Apps
+
+| App | .AIA | Description |
+| --- | --- | --- |
+| [TellMeAJoke](https://dcpetty.dev/mit-app-inventor/2026-csforca-virtual/#tellmeajoke) | <a href="https://code.appinventor.mit.edu/?repo=https://raw.githubusercontent.com/dcpetty/mit-app-inventor/refs/heads/main/2026-csforca-virtual/TellMeAJoke.aia"><img src="../codi-32x32.png" alt="codi" style="vertical-align: middle;"><code>TellMeAJoke.aia</code></a> | A basic generative AI chatbot app. |
+| [Doodle](https://dcpetty.dev/mit-app-inventor/2026-csforca-virtual/#doodle) | <a href="https://code.appinventor.mit.edu/?repo=https://raw.githubusercontent.com/dcpetty/mit-app-inventor/refs/heads/main/2026-csforca-virtual/DoodleStarter.aia"><img src="../codi-32x32.png" alt="codi" style="vertical-align: middle;"><code>DoodleStarter.aia</code></a> | A basic drawing app. |
+| [Map](https://dcpetty.dev/mit-app-inventor/2026-csforca-virtual/#map) | <a href="https://code.appinventor.mit.edu/?repo=https://raw.githubusercontent.com/dcpetty/mit-app-inventor/refs/heads/main/2026-csforca-virtual/MapStarter.aia"><img src="../codi-32x32.png" alt="codi" style="vertical-align: middle;"><code>MapStarter.aia</code></a> | A basic mapping app that calculates ([great circle](https://en.wikipedia.org/wiki/Great_circle)) distances between locations. |
+| [GoodReader](https://dcpetty.dev/mit-app-inventor/2026-csforca-virtual/#goodreader) | <a href="https://code.appinventor.mit.edu/?repo=https://raw.githubusercontent.com/dcpetty/mit-app-inventor/refs/heads/main/2026-csforca-virtual/GoodReaderStarter.aia"><img src="../codi-32x32.png" alt="codi" style="vertical-align: middle;"><code>GoodReaderStarter.aia</code></a> | Use a generative artificial intelligence [ChatBot](https://gemini.google.com/app) to encourage critical reading skills. |
+| [Journal](https://dcpetty.dev/mit-app-inventor/2026-csforca-virtual/#journal) | <a href="https://code.appinventor.mit.edu/?repo=https://raw.githubusercontent.com/dcpetty/mit-app-inventor/refs/heads/main/2026-csforca-virtual/JournalStarter.aia"><img src="../codi-32x32.png" alt="codi" style="vertical-align: middle;"><code>JournalStarter.aia</code></a> | A basic journal app crowd-sourced data in a shared [Google Sheet](https://docs.google.com/spreadsheets/d/16-hA2pixAtVlUXWVXWUHK21pBuEiZXZhDDnSW-uHg7E/). |
+
+## Projects
+
+The *What we learned* sections (starter project and completed project) and the [MIT App Inventor](http://ai2.appinventor.mit.edu/) block code for the completed apps is below.
+
+<style>
+table { width: 100%; }
+.wwl tr > td:first-child { width: 50%; }
+.wwl img { width: 100%; }
+td { list-style-type: square; font-size: small; }
+span { background-color: #bcdb74; border-radius: 8px; padding: 2px 6px; }
+</style>
+
+### TellMeAJoke
+
+#### What we learned
+
+<table class="wwl"><tr>
+
+<td>
+
+<h5>From the starter project in the <span>Designer</span></h5>
+There are typical ways to set up user-interface components in a project.
+<ul>
+<li><em>Screen1</em> is set to <code>Title: TellMeAJoke</code> &mdash; as are all project titles.</li>
+<li><em>Screen1</em> is set to <code>Scrollable: &#x2612;</code> &mdash; so text going off the end of the screen can be scrolled.</li>
+</ul>
+
+</td>
+
+<td>
+
+<h5>From the completed project in the <span>Designer</span></h5>
+Visible and non-visible <a href="https://ai2.appinventor.mit.edu/reference/components/">components</a> can be added to <em>Screen1</em>.
+<ul>
+<li>Added <em>Button1</em> set to <code>Text: Tell me a joke!</code>.</li>
+<li>Added <em>Label1</em> set to <code>Width: Fill Parent...</code> and <code>Text: Joke...</code>.</li>
+<li>Added <em>ChatBot1</em> (non-visible component) set with (the default) <code>Provider: chatgpt</code>.</li></ul>
+
+<h5>From the completed project in the <span>Blocks</span></h5>
+<p>Many <a href="">MIT App Inventor</a> components use the protocol where a component <em>procedure</em> generates an <a href="https://en.wikipedia.org/wiki/Asynchrony_(computer_programming)">asynchronous</a> <em>event</em> &mdash; a two-step process used by <em>ChatBot1</em>. In this case submitting a question to <em>ChatBot1</em> for a joke &#8594; whose result is displayed in <em>Label1</em>.
+<p>Because <em>Chatbot1</em> takes some time to respond when 'thinking,' part of this protocol is to limit submissions to <em>Chatbot1.Converse</em> until a response is received with either <em>Chatbot1.GotResponse</em> or <em>Chatbot1.ErrorOccured</em> events. 
+<ul>
+<li>Add <em>Button1.Click</em> event to call <em>Chatbot1.Converse</em> with the <code>question</code> parameter set to <code>"Tell me a PG joke that I haven't heard before"</code>, to set <em>Label1.Text</em> to <code>"Thinking..."</code> (to clear any previous response and indicate that the chatbot is 'thinking'), and to set <em>Button1.Enabled</em> to <code>false</code> (to disable the button and prevent multiple queries).</li>
+<li>Add <em>ChatBot1.GotResponse</em> event to set <em>Label1.Text</em> to the <code>responseText</code> parameter (to display the response) and set <em>Button1.Enabled</em> to <code>true</code> (to enable the button for the next query). <strong>It is vital that <em>ButtonSubmit.Enabled</em> is set to <code>true</code> in both chatbot events or the app could cease working.</strong></li>
+<li>Add <em>ChatBot1.ErrorOccured</em> event to set <em>Label1.Text</em> to the <code>responseText</code> parameter (to display the error) and set <em>Button1.Enabled</em> to <code>true</code> (to enable the button for the next query). <strong>It is vital that <em>ButtonSubmit.Enabled</em> is set to <code>true</code> in both chatbot events or the app could cease working.</strong></li>
+</ul>
+</td>
+
+</tr></table>
+
+#### Code
+
+<img src="./images/TellMeAJoke-blocks.png" alt="Doodle blocks">
+
+### Doodle
+
+#### What we learned
+
+<table class="wwl"><tr>
+
+<td>
+
+<h5>From the starter project in the <span>Designer</span></h5>
+There are typical ways to set up user-interface components in a project.
+<ul>
+<li><em>Screen1</em> is set to <code>Title: Doodle</code> &mdash; as are all project titles.</li>
+<li><em>Canvas1</em> is set to <code>Width: Fill Parent...</code> and <code>Height: Fill Parent...</code> to fill out the <em>Screen1</em> extent.</li>
+<li><em>HorizontalArrangement1</em> is set to <code>Width: Fill Parent...</code> for when it is made visible.</li>
+</ul>
+Visible components have a <code>visible</code> property that can be used to hide / show parts of the user interface.
+<ul>
+<li><em>HorizontalArrangement1</em> is set to <code>Visible: &#x2610;</code> rendering it invisible.</li>
+</ul>
+</td>
+
+<td>
+
+<h5>From the completed project in the <span>Designer</span></h5>
+By default, user-interface components stack vertically, so use a <a href="https://ai2.appinventor.mit.edu/reference/components/layout.html#HorizontalArrangement">HorizontalArrangement</a> to arrange added components side-by-side and <code>Width: Fill Parent...</code> to space evenly.
+<ul>
+<li>Set <em>HorizontalArrangement1</em> to <code>Visible: &#x2612;</code> rendering it visible.</li>
+<li>Added <em>ButtonClear</em> to <em>HorizontalArrangement1</em> (and named it) set to <code>Text: Clear</code>.</li>
+<li>Added <em>SliderWidth</em> to <em>HorizontalArrangement1</em> (and renamed it) set to <code>Width: Fill Parent...</code>, <code>MaxValue: 20</code>, <code>MinValue: 2</code>, <code>NumberOfSteps: 18</code>, and <code>ThumbPosition: 2</code>.</li>
+</ul> 
+
+<h5>From the completed project in the <span>Blocks</span></h5>
+The <a href="https://ai2.appinventor.mit.edu/reference/components/animation.html#Canvas">Canvas</a> component has many procedures for drawing and managing the image. The thumb-position value of a <a href="https://ai2.appinventor.mit.edu/reference/components/userinterface.html#Slider">Slider</a> can change the behavior of an app.
+<ul>
+<li>The <em>Canvas1.Dragged</em> event calls <em>Canvas1.DrawLine</em> with the proper <a href="https://ai2.appinventor.mit.edu/reference/components/animation.html#Canvas">parameters</a>.</li>
+<li>The <em>ButtonClear.Clicked</em> event calls <em>Canvas1.Clear</em>.</li>
+<li>The <em>SliderWidth.PositionChanged</em> sets <em>Canvas1.LineWidth</em> to the <code>thumbPosition</code> parameter value.</li>
+</ul> 
+
+</td>
+
+</tr></table>
+
+#### Code
+
+<img src="./images/Doodle-blocks.png" alt="Doodle blocks">
+
+### Map
+
+#### What we learned
+
+<table class="wwl"><tr>
+
+<td>
+
+<h5>From the starter project in the <span>Designer</span></h5>
+There are typical ways to set up user-interface components in a project.
+<ul>
+<li><em>Screen1</em> is set to <code>Title: Map</code> &mdash; as are all project titles.</li>
+<li><em>Map1</em> is set to <code>Width: Fill Parent...</code> and <code>Height: Fill Parent...</code> to fill out the <em>Screen1</em> extent.</li>
+</ul>
+<a href="https://ai2.appinventor.mit.edu/reference/components/maps.html#Marker">Marker</a>s (pins) can be added to <a href="https://ai2.appinventor.mit.edu/reference/components/maps.html#Map">Map</a>s in Designer. 
+<ul>
+<li><em>MarkerMcMillen</em> is set to <code>FillColor: Blue</code> (because the default is <code>Red</code>), <code>Latitude: 33.028</code> (the latitude of <a href="https://mcmillen.pisd.edu/">McMillen High School</a>, <code>Longitude:  -96.611</code> (the longitude of <a href="https://mcmillen.pisd.edu/">McMillen High School</a>), and <code>Draggable: &#x2610;</code> (so it will remain fixed).</li>
+</ul> 
+
+</td>
+
+<td>
+
+<h5>From the completed project in the <span>Blocks</span></h5>
+<a href="https://ai2.appinventor.mit.edu/reference/components/maps.html#Marker">Marker</a>s (pins) can be added to <a href="https://ai2.appinventor.mit.edu/reference/components/maps.html#Map">Map</a>s under programmatic control, but must be kept track of.
+<ul>
+<li>The <em>Map1.LongPressAtPoint</em> event initializes the local variable <em>pin</em> with the result of the call to <em>Map1.CreateMarker</em> using the <code>latitude</code> and <code>longitude</code> parameters.</li>
+</ul>
+<a href="https://ai2.appinventor.mit.edu/reference/other/any-component-blocks.html">Any Component Blocks</a> can manage properties, handle events, and call procedures of <em>any</em> component with a reference &mdash; in this case to manage the <a href="https://ai2.appinventor.mit.edu/reference/components/maps.html#Marker">infobox window display</a> property.
+<ul>
+<li>With <em>Any Marker</em> from the <em>Any component</em> drawer, use <em>setMarker.Draggable</em> with the value of the <em>pin</em> local variable as the <code>of component</code> parameter and <code>false</code> as the <code>to</code> parameter &mdash; thereby fixing its position.</li>
+<li>With <em>Any Marker</em> from the <em>Any component</em> drawer, use <em>setMarker.EnableInfoBox</em> with the value of the <em>pin</em> local variable as the <code>of component</code> parameter and <code>true</code> as the <code>to</code> parameter &mdash; thereby enabling the <a href="https://ai2.appinventor.mit.edu/reference/components/maps.html#Marker">infobox window display</a> (including the <em>Title</em>) when the user taps the <em>Marker</em>.</li>
+<li>With <em>Any Marker</em> from the <em>Any component</em> drawer within the local variable block, use <em>setMarker.Title</em> with the value of the <em>pin</em> local variable as the <code>of component</code> parameter and a <em>Text</em> <em>join</em> of two values as the <code>to</code> parameter: <ul><li>the rounded result of a call to <em>Marker.DistanceToPoint</em> from <em>Any Marker</em> in the <em>Any component</em> drawer with the value of the <em>pin</em> local variable as the <code>of component</code> parameter, the value of the <em>MarkerMcMillen.Latitude</em> property as the <code>latitude</code> parameter, and the value of the <em>MarkerMcMillen.Longitude</em> property as the <code>longitude</code> parameter and;</li><li>the text <code>" meters to McMillen"</code>.</li></ul></li>
+</ul> 
+
+</td>
+
+</tr></table>
+
+#### Code
+
+<img src="./images/Map-blocks.png" alt="Doodle blocks">
+
+### GoodReader
+
+#### What we learned
+
+<table class="wwl"><tr>
+
+<td>
+
+<h5>From the starter project in the <span>Designer</span></h5>
+There are typical ways to set up user-interface components in a project, including using <a href="https://ai2.appinventor.mit.edu/reference/components/layout.html#HorizontalArrangement">HorizontalArrangement</a>s to arrange components side-by-side and <code>Width: Fill Parent...</code> to space evenly. The three <a href="https://ai2.appinventor.mit.edu/reference/components/layout.html#HorizontalArrangement">HorizontalArrangement</a>s each contain a label and a user-interface component to create the prompt for <em>ChatBot1</em>.
+<ul>
+<li><em>Screen1</em> is set to <code>Title: GoodReader</code> &mdash; as are all project titles.</li>
+<li><em>HorizontalArrangement1</em> is set to <code>Width: Fill Parent...</code> and has two components within it.
+
+<ul>
+<li><em>Label1</em> is set to <code>Text: Book / Part: </code>.</li>
+<li><em>TextBoxBook</em> is set to <code>Width: Fill Parent...</code>.</li>
+</ul>
+
+</li>
+<li><em>HorizontalArrangement2</em> is set to <code>Width: Fill Parent...</code> and has three components within it.
+
+<ul>
+<li><em>Label2</em> is set to <code>Text: Age: </code>.</li>
+<li><em>SliderAge</em> is set to <code>Width: Fill Parent...</code>, <code>MaxValue: 18</code>, <code>MinValue: 6</code>, <code>NumberOfSteps: 12</code>, and <code>ThumbPosition: 10</code>.</li>
+<li><em>Label2</em> is set to <code>Text: Age</code>.</li>
+</ul>
+
+</li>
+<li><em>HorizontalArrangement3</em> is set to <code>Width: Fill Parent...</code> and has two components within it.
+
+<ul>
+<li><em>Label3</em> is set to <code>Text: Type: </code>.</li>
+<li><em>SpinnerQuestionType</em> is set to <code>Width: Fill Parent...</code> and <code>ElementsFromString: Reading and comprehension questions,Writing prompts,Analysis questions</code>.</li>
+
+</ul>
+
+</li>
+</ul>
+To interact with a <a href="https://ai2.appinventor.mit.edu/reference/components/experimental.html#ChatBot">ChatBot</a> requires configuration (<code>ApiKey</code>, <code>Model</code>, <code>Provider</code>) and a <a href="https://ai2.appinventor.mit.edu/reference/components/userinterface.html#Label">Label</a> to display the response.
+<ul>
+<li><em>LabelResponse</em> is set to <code>Width: Fill Parent...</code>, <code>Text:</code>.</li>
+<li><em>ChatBot1</em> (non-visible component) is set with an <code>ApiKey</code> and <code>Provider: gemini</code>.</li>
+</ul> 
+
+<h5>From the starter project in the <span>Blocks</span></h5>
+<ul>
+<li>The blocks in the <em>Screen1.Initialize</em> event illustrate several <a href="https://appinventor.mit.edu/">MIT App Inventor</a> coding idioms, including iteration and the <em>Any component</em> drawer:
+
+<ul>
+<li>Use of <em>for each item in list</em> from the <em>Control</em> drawer to iterate over each item of a list.</li>
+<li>Using <em>Screen1.Initialize</em> to initialize user-interface component properties &mdash; rather than setting them in the designer. In this case using <em>Any Label</em> from the <em>Any component</em> drawer to set the <em>WidthPercent</em> of <em>Label1</em>, <em>Label2</em>, and <em>Label3</em> and to set the <em>FontSize</em> of <em>every Label</em> (available in <em>Any Label</em> from the <em>Any component</em> drawer).</li>
+<li>Set <em>LabelAge.Text</em> to the initial <em>SliderAge.ThumbPosition</em> value.</li>
+</ul>
+
+<br><img src="./images/MapStarter-ideb-Screen1.Initialize.png" alt="MapStarter Screen1.Initialize blocks"></li>
+<li>An unconnected <em>Chatbot1.Converse</em> call illustrates the GoodReader prompt strategy using <em>SpinnerQuestionType.Selection</em>, <em>SliderAge.ThumbPosition</em>, and <em>TextBoxBook.Text</em>.
+<br><img src="./images/MapStarter-ideb-ChatBot1.Converse.png" alt="MapStarter ChatBot1.Converse blocks"></li>
+</ul>
+
+</td>
+
+<td>
+
+<h5>From the completed project in the <span>Designer</span></h5>
+The starter code includes components for creating a prompt for <em>ChatBot1</em> &mdash; add <em>HorizontalArrangement4</em> and components for interacting with <em>ChatBot1</em>.
+<ul>
+<li>Added <em>HorizontalArrangement4</em> set to <code>Width: Fill Parent...</code> and has two components within it:
+
+<ul>
+<li>Added <em>ButtonSubmit</em> and set to <code>Width: Fill Parent...</code> and <code>Text: Submit</code>.</li>
+<li>Added <em>ButtonNew</em> and set to <code>Width: Fill Parent...</code> and <code>Text: New Reading</code>.</li>
+</ul>
+
+</li>
+</ul>
+
+<h5>From the completed project in the <span>Blocks</span></h5>
+Property modifications for <em>every Button</em> can also be added to <em>Screen1.Initialize</em>.
+<ul>
+<li>Add to the <em>Screen1.Initialize</em> event a <em>for each item in list</em> block from the <em>Control</em> drawer to iterate over each item of the <em>every Button</em> list (available in <em>Any Button</em> from the <em>Any component</em> drawer) to set the <em>FontSize</em> and <em>FontBold</em> of every button.</li>
+</ul>
+The value of a <a href="https://ai2.appinventor.mit.edu/reference/components/userinterface.html#Slider">Slider</a>'s thumb position is only visible if displayed.
+<ul>
+<li>Add a <em>SliderAge.PositionChanged</em> event that sets <em>LabelAge.Text</em> to <em>SliderAge.ThumbPosition</em>.</li>
+</ul>
+The project illustrates several code techniques for smooth interactions with a generative AI <a href="https://ai2.appinventor.mit.edu/reference/components/experimental.html#ChatBot">ChatBot</a>.
+<ul>
+<li>Add <em>ButtonSubmit.Click</em> event to call <em>Chatbot1.Converse</em> with the prompt, to set <em>LabelResponse.Text</em> to <code>""</code> (to clear any previous response and indicate that the chatbot is 'thinking'), to set <em>ButtonSubmit.Enabled</em> to <code>false</code> (to disable the button and prevent multiple queries), and to set <em>ButtonSubmit.TextColor</em> to <code>gray</code> (to 'gray it out').</li>
+<li>Add <em>ChatBot1.GotResponse</em> event to set <em>LabelResponse.Text</em> to the <code>responseText</code> parameter (to display the response), set <em>ButtonSubmit.Enabled</em> to <code>true</code> (to enable the button for the next query), and set <em>ButtonSubmit.TextColor</em> to <code>black</code>. <strong>It is vital that <em>ButtonSubmit.Enabled</em> is set to <code>true</code> in both chatbot events or the app could cease working.</strong></li>
+<li>Add <em>ChatBot1.ErrorOccured</em> event to set <em>LabelResponse.Text</em> to the <code>responseText</code> parameter (to display the error), set <em>ButtonSubmit.Enabled</em> to <code>true</code> (to enable the button for the next query), and set <em>ButtonSubmit.TextColor</em> to <code>black</code>. <strong>It is vital that <em>ButtonSubmit.Enabled</em> is set to <code>true</code> in both chatbot events or the app could cease working.</strong></li>
+<li>Add <em>ButtonNew.Click</em> event to call <em>Chatbot1.ResetConversation</em> and to set <em>LabelResponse.Text</em> to <code>""</code> (to clear any previous response).</li>
+</ul>
+
+</td>
+
+</tr></table>
+
+#### Code
+
+<img src="./images/GoodReader-blocks.png" alt="Doodle blocks">
+
+### Journal
+
+#### What we learned
+
+<table class="wwl"><tr>
+
+<td>
+
+<h5>From the starter project in the <span>Designer</span></h5>
+There are typical ways to set up user-interface components in a project, including using <a href="https://ai2.appinventor.mit.edu/reference/components/layout.html#HorizontalArrangement">HorizontalArrangement</a>s to arrange components side-by-side and <code>Width: Fill Parent...</code> to space evenly.
+<ul>
+<li><em>Screen1</em> is set to <code>Title: Journal</code> &mdash; as are all project titles.</li>
+<li><em>HorizontalArrangement1</em> is set to <code>Width: Fill Parent...</code> and has two components within it.
+
+<ul>
+<li><em>ButtonSave</em> is set to <code>Text: Save</code>.</li>
+<li><em>TextBoxItem</em> is set to <code>Width: Fill Parent...</code>.</li>
+</ul>
+
+</li>
+<li><em>Label1</em> is set to <code>Width: Fill Parent...</code> and <code>Text: Journal...</code>.</li>
+</ul>
+This app include a variety of non-visible components for special functions.
+<ul>
+<li><em>Spreadsheet1</em> (non-visible component) holds the journal entries and is set with <em>ApplicationName: Journal</em> and <em>SpreadsheetID</em> matching the id of the <a href="https://docs.google.com/spreadsheets/d/1Lj-i3dRJB7zXIuJZ_HR3kD3h0KuJI-PWo6_y0SsYDYo/">shared spreadsheet</a>. The <em>CredentialsJson</em> parameter holds a <a href="https://console.cloud.google.com/">Google Sheets API</a> private-key .JSON file generated by following <a href="https://docs.google.com/document/d/10PcV0WGgtedebzxn1H1tu58BP1cSFOIVSUGPwVQ_rsQ/">this step-by-step process</a> &mdash; which includes giving <code>Edit</code> access to the shared spreadsheet for the e-mail address associated with the .JSON credentials. To receive a sample private-key .JSON file, participants could fill out [this form](https://forms.gle/6chRaVweL56sYLYXA).</li>
+<li><em>Clock1</em> (non-visible component) has no special settings and is used only for procedures <em>Clock1.FormatDateTime</em> and <em>Clock1.Now</em>.</li>
+<li><em>ChatBot1</em> (non-visible component) is set with an <code>ApiKey</code> and <code>Provider: gemini</code>.</li>
+</ul>
+
+<h5>From the starter project in the <span>Blocks</span></h5>
+The blocks in the JournalStarter project illustrate several <a href="https://appinventor.mit.edu/">MIT App Inventor</a> coding idioms, including global variables, procedures, and <a href="https://en.wikipedia.org/wiki/Conditional_(computer_programming)">selection</a>.
+<img src="./images/JournalStarter-blocks.png" alt="JournalStarter blocks">:
+<ul>
+<li>Initialize the global variable <em>sheet</em> (from the <em>Variables</em> from the <em>Built-in</em> drawer) to <code>"CHANGE"</code>. This is the shared worksheet within the shared Google Sheet and should be changed to suit the user.</li>
+<li>The <em>Screen1.Initialize</em> event calls <em>Spreadsheet1.AddSheet</em> with the value of the global variable <em>sheet</em> as the <code>sheetName</code> parameter.</li>
+<li>The <em>Spreadsheet1.ErrorOccured</em> event uses an <em>if-then</em> block to filter the <code>errorMessage</code> parameter on the text phrase <code>"already exists"</code> to trap duplicate <em>Spreadsheet1.AddSheet</em> attempts.</li>
+<li>The <em>makeRow</em> procedure returns a three-item list corresponding to three columns in the shared worksheet:
+
+<ul>
+<li>A formatted date and time (<a href="https://man7.org/linux/man-pages/man3/strftime.3.html"><code>"yyyy-MM-dd HH:mm:ss"</code></a>)</li>
+<li>The text <code>"YOUR NAME"</code>.</li>
+<li>The value for the <em>TextBoxItem.Text</em> property.</li>
+</ul>
+
+This is the row that will be added to the shared worksheet with <em>Spreadsheet1.AddRow</em>.</li>
+</ul>
+
+</td>
+
+<td>
+
+<h5>From the completed project in the <span>Blocks</span></h5>
+Many <a href="">MIT App Inventor</a> components use the protocol where a component <em>procedure</em> generates an <a href="https://en.wikipedia.org/wiki/Asynchrony_(computer_programming)">asynchronous</a> <em>event</em> &mdash; a two-step process used by <em>Spreadsheet1</em> and <em>ChatBot1</em>. In this case submitting a journal entry adds a row to <em>Spreadsheet1</em> &#8594; which in turn is queried for <em>all</em> journal entries &#8594; then submitted to <em>ChatBot1</em> for a summary &#8594; whose result is displayed in <em>Label1</em>.
+<ul>
+<li><em>ButtonSave.Click</em> event calls <em>Spreadsheet1.AddRow</em> with the value of <code>global sheet</code> and the result of a call to <code>makeRow</code> as parameters.</li>
+<li>The <em>Spreadsheet1.FinishedAddRow</em> event (the result of <em>Spreadsheet1.AddRow</em>) calls <em>Spreadsheet1.ReadSheet</em> with the value of <code>global sheet</code> as its <code>sheetName</code> parameter to read the entire worksheet.</li>
+<li>The <em>Spreadsheet1.GotSheetData</em> event (the result of <em>Spreadsheet1.ReadSheet</em>) calls <em>ChatBot1.Converse</em> with a prompt consisting of the entire worksheet, prefaced with the text <code>"Summarize this list of items: "</code> as its <code>question</code> parameter. In addition, <em>ButtonSaved.Enabled</em> is set to <code>false</code> to disable it.</li>
+<li>The <em>ChatBot1.GotResponse</em> and <em>ChatBot1.ErrorOccured</em> events (the possible results of <em>ChatBot1.Converse</em>) both display the <code>responseText</code> in <em>Label1.Text</em> and set <em>ButtonSaved.Enabled</em> to <code>true</code> to reenable it.</li>
+</ul>
+
+</td>
+
+</tr></table>
+
+#### Code
+
+<img src="./images/Journal-blocks.png" alt="Doodle blocks">
+
+<hr>
+
+<div style="display: flex; flex-direction: row; justify-content: space-around; margin: 0 10%;">
+<a href="https://dcpetty.github.io/mit-app-inventor/2026-csforca-virtual/">&#128279; permalink</a> 
+<a href="https://github.com/dcpetty/mit-app-inventor/tree/main/2026-csforca-virtual">&#128230; repository</a>
+<!-- 
+PERMALINK: https://dcpetty.github.io/mit-app-inventor/REPO/
+REPOSITORY: https://github.com/dcpetty/mit-app-inventor/tree/main/REPO
+MIT APP INVENTOR: https://code.appinventor.mit.edu/?repo=https://raw.githubusercontent.com/dcpetty/mit-app-inventor/refs/heads/main/REPO/REPO.aia
+-->
+</div>
