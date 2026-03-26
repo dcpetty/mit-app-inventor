@@ -13,7 +13,9 @@ The `Languages` app is a test of [ISO 639](https://en.wikipedia.org/wiki/List_of
 
 ## Designer
 
-All components retain their default properties, except for some default `Text` properties set to their component names.
+All components retain their default properties, except for some default `Text` properties set to their component names. This app takes the approach to component properties that sets them up at runtime with a `setup` procedure.
+
+[![setup blocks](./setup-blocks.png)](https://github.com/psb-david-petty/mit-app-inventor/blob/master/Languages/setup-blocks.png)
 
 <hr>
 
