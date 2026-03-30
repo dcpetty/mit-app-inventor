@@ -15,7 +15,7 @@ This work was inspired by a [Github gist](https://gist.github.com/missinglink/eb
 <li>Use <em>Translate</em> to translate the <em>TextBox1.Text</em> sample sentence from the default language (in my case, <code>en</code>) to the last-selected language. The sample sentence can be modified in the textbox.</li>
 <li>Use <em>Speak</em> to speak the translated sample sentence in the last-selected language of the last-selected country.</li>
 </ul></div>
-<div style="flex: 1; width: 50%; display: block; margin: auto;"><a href="https://github.com/dcpetty/mit-app-inventor/blob/master/Languages/Languages-screenshot.png"><img src="./Languages-screenshot.png" alt="Languages screenshot"></a></div>
+<div style="flex: 1;"><a href="https://github.com/dcpetty/mit-app-inventor/blob/master/Languages/Languages-screenshot.png"><img src="./Languages-screenshot.png" alt="Languages screenshot" style="width: 50%; display: block; margin: auto;"></a></div>
 </div>
 
 - When first clicked, the *SpinnerL.Elements* property is set to the *TextToSpeech1.AvailableLanguages* property &mdash; which cannot happen in *Screen1.Initialize* because the *AvailableLanguages* property is not yet available during initialization.
