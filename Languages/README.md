@@ -8,7 +8,15 @@ This work was inspired by a [Github gist](https://gist.github.com/missinglink/eb
 
 ## Use
 
-<div style="width: 50%; display: block; margin: auto;"><a href="https://github.com/dcpetty/mit-app-inventor/blob/master/Languages/Languages-screenshot.png"><img src="./Languages-screenshot.png" alt="Languages screenshot"></a></div>
+<div style="display: flex; align-items: center; width: 100%;">
+<div style="flex: 1">The use of the <code>Languages</code> app follows these basic steps:
+<ul> 
+<li>Use <em>Select Valid Language</em> (with <em>SpinnerL</em>) then <em>Language &rarr; Country</em> (with <em>SpinnerL2C</em>) to set a valid country for a given language OR <em>Select Valid Country</em> (with <em>SpinnerC</em>) then <em>Country &rarr; Language</em> (with <em>SpinnerC2L</em>) to set a valid language for a given country.</li>
+<li>Use <em>Translate</em> to translate the <em>TextBox1.Text</em> sample sentence from the default language (in my case, <code>en</code>) to the last-selected language. The sample sentence can be modified in the textbox.</li>
+<li>Use <em>Speak</em> to speak the translated sample sentence in the last-selected language of the last-selected country.</li>
+</ul></div>
+<div style="flex: 1; display: block; margin: auto;"><a href="https://github.com/dcpetty/mit-app-inventor/blob/master/Languages/Languages-screenshot.png"><img src="./Languages-screenshot.png" alt="Languages screenshot"></a></div>
+</div>
 
 - When first clicked, the *SpinnerL.Elements* property is set to the *TextToSpeech1.AvailableLanguages* property &mdash; which cannot happen in *Screen1.Initialize* because the *AvailableLanguages* property is not yet available during initialization.
 - When an available language is selected from *SpinnerL*, the *SpinnerL2C.Elements* property is set to the list of countries listed in the `country_lookup` key in [`iso-data.json`](https://github.com/dcpetty/google-colaboratory/blob/main/iso/iso-data.json) that match the *TextToSpeech1.AvailableCountries* property *for that selected language*.
@@ -28,11 +36,11 @@ Further explanation [TK](https://en.wikipedia.org/wiki/To_come_(publishing))&hel
 
 ## JSON files
 
-- [`iso-3166-countries.json`](https://github.com/dcpetty/google-colaboratory/blob/main/iso/iso-3166-countries.json) &mdash; 
-- [`iso-639-languages.json`](https://github.com/dcpetty/google-colaboratory/blob/main/iso/iso-639-languages.json) &mdash; 
-- [`iso-data.json`](https://github.com/dcpetty/google-colaboratory/blob/main/iso/iso-data.json) &mdash; 
-- [`unsd-m49-categories.json`](https://github.com/dcpetty/google-colaboratory/blob/main/iso/unsd-m49-categories.json) &mdash; 
-- [`codes.json`](https://gist.github.com/dcpetty/a41f2834f3a66c890fff91db0073ae83) &mdash; matches [`codes.json`](https://gist.github.com/missinglink/ebe8ba69e58dbdfb47750f6079364ecc).
+- [`iso-3166-countries.json`](https://github.com/dcpetty/google-colaboratory/blob/main/iso/iso-3166-countries.json) &mdash; 301 ISO 3166 languages
+- [`iso-639-languages.json`](https://github.com/dcpetty/google-colaboratory/blob/main/iso/iso-639-languages.json) &mdash;  7929 ISO 639 languages
+- [`iso-data.json`](https://github.com/dcpetty/google-colaboratory/blob/main/iso/iso-data.json) &mdash; collected and tagged language (key `country_lookup`) and country (key `language_lookup` ) data
+- [`unsd-m49-categories.json`](https://github.com/dcpetty/google-colaboratory/blob/main/iso/unsd-m49-categories.json) &mdash; 36 M49 regions
+- [`codes.json`](https://gist.github.com/dcpetty/a41f2834f3a66c890fff91db0073ae83) &mdash; matches 251 country / language codes in [`codes.json`](https://gist.github.com/missinglink/ebe8ba69e58dbdfb47750f6079364ecc).
 
 ## Designer
 
