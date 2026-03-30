@@ -12,11 +12,13 @@ This work was inspired by a [Github gist](https://gist.github.com/missinglink/eb
 <div style="flex: 1">The use of the <code>Languages</code> app follows these basic steps:
 <ul> 
 <li>Use <em>Select Valid Language</em> (with <em>SpinnerL</em>) then <em>Language &rarr; Country</em> (with <em>SpinnerL2C</em>) to set a valid country for a given language OR <em>Select Valid Country</em> (with <em>SpinnerC</em>) then <em>Country &rarr; Language</em> (with <em>SpinnerC2L</em>) to set a valid language for a given country.</li>
-<li>Use <em>Translate</em> to translate the <em>TextBox1.Text</em> sample sentence from the default language (in my case, <code>en</code>) to the last-selected language. The sample sentence can be modified in the textbox.</li>
+<li>Use <em>Translate</em> to translate the <em>TextBox1.Text</em> sample sentence from the default language (<em>e.g.</em> <code>en</code>) to the last-selected language. The sample sentence can be modified in the textbox.</li>
 <li>Use <em>Speak</em> to speak the translated sample sentence in the last-selected language of the last-selected country.</li>
 </ul></div>
 <div style="flex: 1;"><a href="https://github.com/dcpetty/mit-app-inventor/blob/master/Languages/Languages-screenshot.png"><img src="./Languages-screenshot.png" alt="Languages screenshot" style="width: 50%; display: block; margin: auto;"></a></div>
 </div>
+
+### Component-level description
 
 - When first clicked, the *SpinnerL.Elements* property is set to the *TextToSpeech1.AvailableLanguages* property &mdash; which cannot happen in *Screen1.Initialize* because the *AvailableLanguages* property is not yet available during initialization.
 - When an available language is selected from *SpinnerL*, the *SpinnerL2C.Elements* property is set to the list of countries listed in the `country_lookup` key in [`iso-data.json`](https://github.com/dcpetty/google-colaboratory/blob/main/iso/iso-data.json) that match the *TextToSpeech1.AvailableCountries* property *for that selected language*.
