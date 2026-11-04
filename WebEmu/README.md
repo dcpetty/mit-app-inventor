@@ -1,9 +1,8 @@
 # WebEmu
 
 This directory contains several sample MIT App Inventor projects to try out with the Web Emulator (WebEmu) now built into [MIT App Inventor](htps://appinventor.mit.edu/) with *Test in Web*.
-<div style="text-align: center;">
-![connect menu](./connect-menu.png)
-</div>
+
+<div style="text-align: center;"><img src="./connect-menu.png" alt="connect menu"></div>
 
 Projects include:
 
