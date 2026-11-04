@@ -17,6 +17,7 @@ Sample MIT App Inventor projects
 | [./Reorient](./Reorient) | The `Reorient` app demonstrates the delay between changing the `Screen1` orientation and the `Screen1` dimensions actually changing. |
 | [./SecretWord](./SecretWord) | The `SecretWord` app is a speech-recognition app that mirrors the *secret word* of **[You Bet Your Life](https://en.wikipedia.org/wiki/You_Bet_Your_Life)** (1950&ndash;1960) with Groucho Marx. |
 | [./StoryGPTAnalyze2Starter](./StoryGPTAnalyze2Starter) | The `StoryGPTAnalyze2Starter ` app is a starter file for the *StoryGPT with Analysis (2 `Button`s)* tutorial. |
+| [./WebEmu](./WebEmu) | The `WebEmu` apps are meant to demonstrate the MIT App Inventor Web Emulator. |
 
 <hr>
 
