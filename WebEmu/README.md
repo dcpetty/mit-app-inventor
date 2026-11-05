@@ -8,6 +8,9 @@ This directory contains several sample MIT App Inventor projects to try out with
 
 Use these projects to demonstrate the capabilities of the WebEmu:
 
+- <img src="../codi-32x32.png" alt="codi" style="vertical-align: middle;" /> [WebEmuGoodReader](https://code.appinventor.mit.edu/?repo=https://raw.githubusercontent.com/dcpetty/mit-app-inventor/refs/heads/main/WebEmu/WebEmuGoodReader.aia):
+  - Modify `SpinnerQuestionType.Elements` to include additional question types.
+  - Try various generative-AI models and compare the responses.
 - <img src="../codi-32x32.png" alt="codi" style="vertical-align: middle;" /> [WebEmuPIC](https://code.appinventor.mit.edu/?repo=https://raw.githubusercontent.com/dcpetty/mit-app-inventor/refs/heads/main/WebEmu/WebEmuPIC.aia):
   - Create your own *personal image classifier* (PIC) models at: [https://classifier.appinventor.mit.edu/oldpic/](https://classifier.appinventor.mit.edu/oldpic/) by following the [tutorial](https://appinventor.mit.edu/explore/resources/ai/personal-image-classifier-part1). 
 - <img src="../codi-32x32.png" alt="codi" style="vertical-align: middle;" /> [WebEmuPiano](https://code.appinventor.mit.edu/?repo=https://raw.githubusercontent.com/dcpetty/mit-app-inventor/refs/heads/main/WebEmu/WebEmuPiano.aia):
